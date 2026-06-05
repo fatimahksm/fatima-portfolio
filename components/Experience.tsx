@@ -10,9 +10,9 @@ interface ExperienceProps {
 }
 
 const badgeConfig = {
-  client: { label: { en: 'Client Project', fr: 'Projet Client' }, color: 'bg-stone-100 text-stone-600 dark:bg-stone-800/50 dark:text-stone-300' },
-  confidential: { label: { en: 'Confidential', fr: 'Confidentiel' }, color: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300' },
-  internship: { label: { en: 'Internship', fr: 'Stage' }, color: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800/40 dark:text-neutral-300' },
+  client: { label: { en: 'Client Project', fr: 'Projet Client' }, color: 'bg-amber-100/80 text-amber-800 dark:bg-amber-950/30 dark:text-amber-400' },
+  confidential: { label: { en: 'Confidential', fr: 'Confidentiel' }, color: 'bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800/60 dark:text-neutral-400' },
+  internship: { label: { en: 'Internship', fr: 'Stage' }, color: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/40 dark:text-zinc-300' },
 }
 
 const iconMap = {

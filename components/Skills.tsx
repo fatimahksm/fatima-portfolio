@@ -9,21 +9,21 @@ interface SkillsProps {
 }
 
 const categoryColors = [
+  'bg-amber-50/80 border-amber-200/50 dark:bg-amber-950/10 dark:border-amber-800/20',
+  'bg-neutral-50 border-neutral-200/60 dark:bg-neutral-900/20 dark:border-neutral-700/20',
   'bg-stone-50 border-stone-200/50 dark:bg-stone-900/20 dark:border-stone-700/20',
-  'bg-rose-50/70 border-rose-200/40 dark:bg-rose-950/10 dark:border-rose-900/20',
-  'bg-slate-50 border-slate-200/50 dark:bg-slate-900/15 dark:border-slate-700/20',
-  'bg-sky-50/70 border-sky-200/40 dark:bg-sky-950/10 dark:border-sky-900/20',
-  'bg-violet-50/60 border-violet-200/40 dark:bg-violet-950/10 dark:border-violet-900/20',
-  'bg-neutral-50 border-neutral-200/50 dark:bg-neutral-900/15 dark:border-neutral-700/20',
+  'bg-amber-50/60 border-amber-100/60 dark:bg-amber-950/8 dark:border-amber-900/15',
+  'bg-zinc-50 border-zinc-200/50 dark:bg-zinc-900/20 dark:border-zinc-700/20',
+  'bg-neutral-50 border-neutral-200/50 dark:bg-neutral-900/15 dark:border-neutral-700/15',
 ]
 
 const headerColors = [
+  'text-amber-700 dark:text-amber-400',
+  'text-neutral-500 dark:text-neutral-300',
   'text-stone-500 dark:text-stone-300',
-  'text-rose-400 dark:text-rose-400',
-  'text-slate-500 dark:text-slate-400',
-  'text-sky-500 dark:text-sky-400',
-  'text-violet-500 dark:text-violet-400',
-  'text-neutral-500 dark:text-neutral-400',
+  'text-amber-600 dark:text-amber-400',
+  'text-zinc-500 dark:text-zinc-300',
+  'text-neutral-500 dark:text-neutral-300',
 ]
 
 export default function Skills({ lang }: SkillsProps) {

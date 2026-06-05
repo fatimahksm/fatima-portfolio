@@ -12,11 +12,11 @@ interface ProjectsProps {
 }
 
 const badgeStyles: Record<Project['badge'], { label: { en: string; fr: string }; style: string }> = {
-  client: { label: { en: 'Client Project', fr: 'Projet Client' }, style: 'bg-stone-100 text-stone-600 dark:bg-stone-800/50 dark:text-stone-300' },
-  team: { label: { en: 'Team Project', fr: 'Projet en Équipe' }, style: 'bg-slate-100 text-slate-600 dark:bg-slate-800/40 dark:text-slate-300' },
-  solo: { label: { en: 'Solo Project', fr: 'Projet Individuel' }, style: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800/40 dark:text-neutral-300' },
-  university: { label: { en: 'University Project', fr: 'Projet Universitaire' }, style: 'bg-violet-100/80 text-violet-700 dark:bg-violet-900/20 dark:text-violet-300' },
-  confidential: { label: { en: 'Confidential', fr: 'Confidentiel' }, style: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300' },
+  client: { label: { en: 'Client Project', fr: 'Projet Client' }, style: 'bg-amber-100/80 text-amber-800 dark:bg-amber-950/30 dark:text-amber-400' },
+  team: { label: { en: 'Team Project', fr: 'Projet en Équipe' }, style: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800/50 dark:text-neutral-300' },
+  solo: { label: { en: 'Solo Project', fr: 'Projet Individuel' }, style: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/40 dark:text-zinc-300' },
+  university: { label: { en: 'University Project', fr: 'Projet Universitaire' }, style: 'bg-stone-100 text-stone-600 dark:bg-stone-800/40 dark:text-stone-300' },
+  confidential: { label: { en: 'Confidential', fr: 'Confidentiel' }, style: 'bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800/60 dark:text-neutral-400' },
 }
 
 // Abstract placeholder visual per project
