@@ -6,31 +6,31 @@
 /* ── Theme Variables ─────────────────────────────────────────────────────── */
 
 :root {
-  --page:        #FAF8F5;
+  --page:        #FAF7F2;
   --card:        #FFFFFF;
-  --subtle:      #F4EFE8;
-  --divider:     #E0D3C3;
-  --accent:      #7A5C3E;
-  --accent-h:    #9A7450;
-  --ink:         #2D1F14;
-  --ink-2:       #6B5140;
-  --ink-3:       #9A8070;
-  --nav-blur:    rgba(250, 248, 245, 0.88);
-  --shadow:      0 1px 3px rgba(45,31,20,0.08), 0 4px 16px rgba(45,31,20,0.06);
+  --subtle:      #F3EDE4;
+  --divider:     #E7DCCF;
+  --accent:      #C9A98C;
+  --accent-h:    #B89478;
+  --ink:         #2F2A26;
+  --ink-2:       #7A7168;
+  --ink-3:       #AEA79F;
+  --nav-blur:    rgba(250, 247, 242, 0.90);
+  --shadow:      0 1px 3px rgba(47,42,38,0.06), 0 4px 16px rgba(47,42,38,0.05);
 }
 
 .dark {
-  --page:        #18100C;
-  --card:        #241914;
-  --subtle:      #2E2018;
-  --divider:     #3E2C20;
-  --accent:      #C4965A;
-  --accent-h:    #D4A870;
-  --ink:         #F0E6D8;
-  --ink-2:       #B89278;
-  --ink-3:       #8A7060;
-  --nav-blur:    rgba(24, 16, 12, 0.90);
-  --shadow:      0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
+  --page:        #111111;
+  --card:        #1A1A1A;
+  --subtle:      #202020;
+  --divider:     #2E2E2E;
+  --accent:      #D6BFA8;
+  --accent-h:    #E2CEBA;
+  --ink:         #F8F4EF;
+  --ink-2:       #B8AEA4;
+  --ink-3:       #6B6560;
+  --nav-blur:    rgba(17, 17, 17, 0.92);
+  --shadow:      0 1px 3px rgba(0,0,0,0.25), 0 4px 16px rgba(0,0,0,0.20);
 }
 
 /* ── Tailwind Theme ──────────────────────────────────────────────────────── */

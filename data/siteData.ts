@@ -161,7 +161,7 @@ export const projects: Project[] = [
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'client',
-    gradient: 'from-amber-900/30 via-stone-800/20 to-amber-800/30',
+    gradient: 'from-stone-300/45 via-neutral-200/30 to-stone-200/40',
   },
   {
     id: 'hobbysphere',
@@ -185,7 +185,7 @@ export const projects: Project[] = [
     },
     teamInfo: { en: 'Team Project', fr: 'Projet en équipe' },
     badge: 'team',
-    gradient: 'from-rose-900/25 via-stone-800/20 to-orange-900/25',
+    gradient: 'from-rose-300/45 via-pink-200/25 to-rose-200/35',
   },
   {
     id: 'nutribite',
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     role: { en: 'Full Stack Web Developer', fr: 'Développeuse Web Full Stack' },
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'solo',
-    gradient: 'from-emerald-900/25 via-stone-800/20 to-teal-900/25',
+    gradient: 'from-teal-300/45 via-emerald-200/25 to-teal-200/35',
   },
   {
     id: 'unify',
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     role: { en: 'Android Java Developer', fr: 'Développeuse Android Java' },
     teamInfo: { en: 'University Project', fr: 'Projet universitaire' },
     badge: 'university',
-    gradient: 'from-blue-900/25 via-stone-800/20 to-indigo-900/25',
+    gradient: 'from-blue-300/45 via-indigo-200/25 to-blue-200/35',
   },
   {
     id: 'confidential',
@@ -247,7 +247,7 @@ export const projects: Project[] = [
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
     teamInfo: { en: 'Private Project', fr: 'Projet privé' },
     badge: 'confidential',
-    gradient: 'from-stone-800/40 via-zinc-800/30 to-stone-900/40',
+    gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
   },
 ]
 

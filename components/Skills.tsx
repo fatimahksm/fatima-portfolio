@@ -9,21 +9,21 @@ interface SkillsProps {
 }
 
 const categoryColors = [
-  'bg-amber-50 border-amber-200/60 dark:bg-amber-950/20 dark:border-amber-800/30',
-  'bg-rose-50 border-rose-200/60 dark:bg-rose-950/20 dark:border-rose-800/30',
-  'bg-stone-50 border-stone-200/60 dark:bg-stone-900/30 dark:border-stone-700/30',
-  'bg-teal-50 border-teal-200/60 dark:bg-teal-950/20 dark:border-teal-800/30',
-  'bg-violet-50 border-violet-200/60 dark:bg-violet-950/20 dark:border-violet-800/30',
-  'bg-orange-50 border-orange-200/60 dark:bg-orange-950/20 dark:border-orange-800/30',
+  'bg-stone-50 border-stone-200/50 dark:bg-stone-900/20 dark:border-stone-700/20',
+  'bg-rose-50/70 border-rose-200/40 dark:bg-rose-950/10 dark:border-rose-900/20',
+  'bg-slate-50 border-slate-200/50 dark:bg-slate-900/15 dark:border-slate-700/20',
+  'bg-sky-50/70 border-sky-200/40 dark:bg-sky-950/10 dark:border-sky-900/20',
+  'bg-violet-50/60 border-violet-200/40 dark:bg-violet-950/10 dark:border-violet-900/20',
+  'bg-neutral-50 border-neutral-200/50 dark:bg-neutral-900/15 dark:border-neutral-700/20',
 ]
 
 const headerColors = [
-  'text-amber-800 dark:text-amber-400',
-  'text-rose-800 dark:text-rose-400',
-  'text-stone-700 dark:text-stone-300',
-  'text-teal-800 dark:text-teal-400',
-  'text-violet-800 dark:text-violet-400',
-  'text-orange-800 dark:text-orange-400',
+  'text-stone-500 dark:text-stone-300',
+  'text-rose-400 dark:text-rose-400',
+  'text-slate-500 dark:text-slate-400',
+  'text-sky-500 dark:text-sky-400',
+  'text-violet-500 dark:text-violet-400',
+  'text-neutral-500 dark:text-neutral-400',
 ]
 
 export default function Skills({ lang }: SkillsProps) {

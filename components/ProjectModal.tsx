@@ -12,11 +12,11 @@ interface ProjectModalProps {
 }
 
 const badgeStyles: Record<Project['badge'], string> = {
-  client: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
-  team: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
-  solo: 'bg-stone-100 text-stone-700 dark:bg-stone-800/50 dark:text-stone-300',
-  university: 'bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300',
-  confidential: 'bg-zinc-100 text-zinc-700 dark:bg-zinc-800/60 dark:text-zinc-300',
+  client: 'bg-stone-100 text-stone-600 dark:bg-stone-800/50 dark:text-stone-300',
+  team: 'bg-slate-100 text-slate-600 dark:bg-slate-800/40 dark:text-slate-300',
+  solo: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800/40 dark:text-neutral-300',
+  university: 'bg-violet-100/80 text-violet-700 dark:bg-violet-900/20 dark:text-violet-300',
+  confidential: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300',
 }
 
 export default function ProjectModal({ project, lang, onClose }: ProjectModalProps) {
