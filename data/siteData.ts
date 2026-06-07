@@ -9,7 +9,7 @@ export const commonLinks = {
   whatsapp: 'https://wa.me/96181639234',
   linkedin:
     'https://www.linkedin.com/in/fatima-kassem-4711382b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-  cv: '/Fatima_Kassem_CV.pdf',
+  cv: '/cv',
   github: null as string | null,
 }
 

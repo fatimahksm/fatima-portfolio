@@ -50,16 +50,13 @@ export default function Contact({ lang }: ContactProps) {
         >
           {contactContent.buttons.map((btn) => {
             const Icon = iconMap[btn.key]
-            const isExternal = !btn.href.startsWith('mailto:') && btn.href !== '/Fatima_Kassem_CV.pdf'
-            const isCV = btn.key === 'cv'
             return (
               <motion.a
                 key={btn.key}
                 variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
                 href={btn.href}
-                target={isExternal ? '_blank' : undefined}
-                rel={isExternal ? 'noopener noreferrer' : undefined}
-                download={isCV ? true : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 text-sm font-semibold px-5 py-3 rounded-lg transition-all duration-200 ${buttonVariants[btn.key]}`}
               >
                 {Icon && <Icon size={16} />}

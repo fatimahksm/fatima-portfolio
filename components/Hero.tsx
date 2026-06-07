@@ -134,7 +134,8 @@ export default function Hero({ lang }: HeroProps) {
 
               <a
                 href={commonLinks.cv}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-lg border border-divider text-ink-2 hover:border-accent hover:text-accent transition-all duration-200"
               >
                 <Download size={16} />
