@@ -17,6 +17,7 @@ export interface Project {
   gradient: string
   githubUrl?: string
   privateCode?: boolean
+  image?: string
 }
 
 export interface ExperienceItem {
