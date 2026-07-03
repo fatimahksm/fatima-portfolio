@@ -77,12 +77,9 @@ export default function Footer({ lang }: FooterProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-divider pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="border-t border-divider pt-6 flex justify-center">
           <p className="text-xs text-ink-3">
             © {year} {personalInfo.name}. {lang === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
-          </p>
-          <p className="text-xs text-ink-3">
-            {lang === 'en' ? 'Designed & developed by Fatima Kassem' : 'Conçu et développé par Fatima Kassem'}
           </p>
         </div>
       </div>
