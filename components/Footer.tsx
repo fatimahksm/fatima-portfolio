@@ -82,7 +82,7 @@ export default function Footer({ lang }: FooterProps) {
             © {year} {personalInfo.name}. {lang === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
           </p>
           <p className="text-xs text-ink-3">
-            {lang === 'en' ? 'Built with Next.js & Tailwind CSS' : 'Construit avec Next.js & Tailwind CSS'}
+            {lang === 'en' ? 'Designed & developed by Fatima Kassem' : 'Conçu et développé par Fatima Kassem'}
           </p>
         </div>
       </div>
