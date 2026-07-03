@@ -86,8 +86,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Solo', fr: 'Individuel' },
     technologies: ['Next.js', 'Java Spring Boot'],
     description: {
-      en: 'Independently developed a professional e-commerce web application focused on product browsing, product details, categories, admin dashboard, search, filters, and responsive design.',
-      fr: "Développement indépendant d'une application web e-commerce professionnelle axée sur la consultation des produits, les détails produits, les catégories, le tableau de bord administrateur, la recherche, les filtres et le design responsive.",
+      en: 'Handled a real client engagement end to end as the sole developer — from understanding the requirements and structuring the interface to building the backend APIs and delivering a production-ready result to the client.',
+      fr: "Prise en charge complète d'une mission client réelle en tant que seule développeuse — de la compréhension des besoins et la structuration de l'interface jusqu'à la construction des APIs backend et la livraison d'un résultat prêt pour la production.",
     },
     badge: 'client',
   },
@@ -98,8 +98,8 @@ export const experiences: ExperienceItem[] = [
     status: { en: 'Confidential — In Progress', fr: 'Confidentiel — En cours' },
     technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: 'Currently collaborating on a private software development project. Project details remain confidential, while the work reflects real-world full-stack development experience.',
-      fr: "Collaboration actuelle sur un projet logiciel privé. Les détails du projet restent confidentiels, tandis que le travail reflète une expérience réelle en développement full stack.",
+      en: 'Currently working as a full-stack developer on a private client project, taking features from design to delivery across a Flutter mobile app and a Spring Boot / PostgreSQL backend. Project details remain confidential.',
+      fr: "Développeuse full stack sur un projet client privé en cours, en charge de fonctionnalités de la conception à la livraison, sur une application mobile Flutter et un backend Spring Boot / PostgreSQL. Les détails du projet restent confidentiels.",
     },
     badge: 'confidential',
   },
@@ -114,8 +114,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Solo', fr: 'Individuel' },
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
     description: {
-      en: 'Designed and developed NutriBite independently as a full-stack web platform, covering frontend, backend, database integration, and multi-role system features.',
-      fr: "Conception et développement de NutriBite de manière indépendante en tant que plateforme web full stack, incluant le frontend, le backend, l'intégration de la base de données et les fonctionnalités multi-rôles.",
+      en: 'During my internship at Laptop, I was trusted to build the NutriBite platform on my own — planning the structure, implementing the React frontend and Node.js backend, and delivering a working multi-role platform by the end of the internship.',
+      fr: "Durant mon stage chez Laptop, on m'a confié la construction de la plateforme NutriBite en autonomie — de la planification de la structure à l'implémentation du frontend React et du backend Node.js, jusqu'à la livraison d'une plateforme multi-rôles fonctionnelle à la fin du stage.",
     },
     badge: 'internship',
   },
@@ -130,8 +130,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Team Project', fr: 'Projet en équipe' },
     technologies: ['React Native', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: 'Contributed as part of a development team, focusing on React Native mobile development, Spring Boot backend APIs, and payment integration features.',
-      fr: "Participation au sein d'une équipe de développement, avec une contribution principale au développement mobile React Native, aux APIs backend avec Spring Boot et aux fonctionnalités de paiement.",
+      en: 'Worked inside a real development team with Git-based collaboration — my main responsibilities were React Native screens, Spring Boot backend endpoints, and the payment integration for the Hobby Sphere app.',
+      fr: "Travail au sein d'une véritable équipe de développement avec une collaboration basée sur Git — mes responsabilités principales : les écrans React Native, les endpoints backend Spring Boot et l'intégration des paiements pour l'application Hobby Sphere.",
     },
     badge: 'internship',
   },
