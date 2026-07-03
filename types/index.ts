@@ -15,6 +15,8 @@ export interface Project {
   teamInfo: { en: string; fr: string }
   badge: 'client' | 'team' | 'solo' | 'university' | 'confidential'
   gradient: string
+  githubUrl?: string
+  privateCode?: boolean
 }
 
 export interface ExperienceItem {

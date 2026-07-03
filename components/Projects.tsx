@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Lock } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 import type { Lang, Project } from '@/types'
 import { projects, sectionLabels } from '@/data/siteData'
 import SectionHeader from './SectionHeader'
@@ -109,14 +110,35 @@ export default function Projects({ lang }: ProjectsProps) {
                     )}
                   </div>
 
-                  {/* View Details button */}
-                  <button
-                    onClick={() => setSelected(project)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-h transition-colors duration-200 self-start"
-                  >
-                    <ExternalLink size={13} />
-                    {sectionLabels.viewDetails[lang]}
-                  </button>
+                  {/* View Details + code link / private note */}
+                  <div className="flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => setSelected(project)}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-h transition-colors duration-200"
+                    >
+                      <ExternalLink size={13} />
+                      {sectionLabels.viewDetails[lang]}
+                    </button>
+
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.name[lang]} — GitHub`}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-2 hover:text-ink transition-colors duration-200"
+                      >
+                        <FaGithub size={14} />
+                        GitHub
+                      </a>
+                    )}
+                    {project.privateCode && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-ink-3">
+                        <Lock size={11} />
+                        {sectionLabels.privateCode[lang]}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             )

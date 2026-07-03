@@ -162,6 +162,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'client',
     gradient: 'from-stone-300/45 via-neutral-200/30 to-stone-200/40',
+    privateCode: true,
   },
   {
     id: 'hobbysphere',
@@ -186,6 +187,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Team Project', fr: 'Projet en équipe' },
     badge: 'team',
     gradient: 'from-rose-300/45 via-pink-200/25 to-rose-200/35',
+    githubUrl: 'https://github.com/fatimahh0/HobbySphereMobile',
   },
   {
     id: 'nutribite',
@@ -228,6 +230,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'University Project', fr: 'Projet universitaire' },
     badge: 'university',
     gradient: 'from-blue-300/45 via-indigo-200/25 to-blue-200/35',
+    githubUrl: 'https://github.com/fatimahksm/Unify',
   },
   {
     id: 'confidential',
@@ -248,6 +251,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Private Project', fr: 'Projet privé' },
     badge: 'confidential',
     gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
+    privateCode: true,
   },
 ]
 
@@ -342,4 +346,6 @@ export const sectionLabels = {
   technologies: { en: 'Technologies', fr: 'Technologies' },
   status: { en: 'Status', fr: 'Statut' },
   team: { en: 'Team', fr: 'Équipe' },
+  viewCode: { en: 'View Code', fr: 'Voir le Code' },
+  privateCode: { en: 'Private client project', fr: 'Projet client privé' },
 }
