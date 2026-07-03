@@ -5,8 +5,6 @@ import type { NavItem, Project, ExperienceItem, SkillCategory, EducationItem } f
 export const commonLinks = {
   email: 'kassemf96@gmail.com',
   emailLink: 'mailto:kassemf96@gmail.com',
-  phone: '+961 81 639 234',
-  whatsapp: 'https://wa.me/96181639234',
   linkedin:
     'https://www.linkedin.com/in/fatima-kassem-4711382b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
   cv: '/Fatima_Kassem_CV.pdf',
@@ -324,7 +322,6 @@ export const contactContent = {
   },
   buttons: [
     { key: 'email', en: 'Email', fr: 'Email', href: commonLinks.emailLink },
-    { key: 'whatsapp', en: 'WhatsApp', fr: 'WhatsApp', href: commonLinks.whatsapp },
     { key: 'linkedin', en: 'LinkedIn', fr: 'LinkedIn', href: commonLinks.linkedin },
     { key: 'cv', en: 'Download CV', fr: 'Télécharger CV', href: commonLinks.cv },
   ],
