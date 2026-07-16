@@ -85,8 +85,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
     technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. The company and project names remain confidential.",
-      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. Les noms de la société et du projet restent confidentiels.",
+      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. Also supervised around 10 interns across three internal projects (Feb – May 2026), reviewing their code, guiding their development process, and helping them resolve technical problems. The company and project names remain confidential.",
+      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. J'ai également encadré une dizaine de stagiaires sur trois projets internes (février – mai 2026) : revue de code, accompagnement du processus de développement et aide à la résolution de problèmes techniques. Les noms de la société et des projets restent confidentiels.",
     },
     badge: 'confidential',
   },
