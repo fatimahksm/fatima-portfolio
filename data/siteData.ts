@@ -41,13 +41,13 @@ export const heroContent = {
   typingTexts: {
     en: [
       'Full Stack Web & Mobile Developer',
-      'React Native Developer',
+      'Flutter Developer',
       'Spring Boot Developer',
       'Frontend & Backend Developer',
     ],
     fr: [
       'Développeuse Full Stack Web & Mobile',
-      'Développeuse React Native',
+      'Développeuse Flutter',
       'Développeuse Spring Boot',
       'Développeuse Frontend & Backend',
     ],
