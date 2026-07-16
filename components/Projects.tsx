@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Lock } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 import type { Lang, Project } from '@/types'
 import { projects, sectionLabels } from '@/data/siteData'
 import SectionHeader from './SectionHeader'
@@ -19,25 +20,69 @@ const badgeStyles: Record<Project['badge'], { label: { en: string; fr: string };
   confidential: { label: { en: 'Confidential', fr: 'Confidentiel' }, style: 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300' },
 }
 
-// Abstract placeholder visual per project
-function ProjectVisual({ gradient, badge }: { gradient: string; badge: Project['badge'] }) {
-  const icons: Record<Project['badge'], string> = {
-    client: '🛒',
-    team: '⚡',
-    solo: '🌿',
-    university: '🎓',
-    confidential: '🔒',
+const badgeIcons: Record<Project['badge'], string> = {
+  client: '🛒',
+  team: '⚡',
+  solo: '🌿',
+  university: '🎓',
+  confidential: '🔒',
+}
+
+// Project visual: real screenshot if provided, otherwise a device mockup
+function ProjectVisual({ project }: { project: Project }) {
+  if (project.image) {
+    return (
+      <div className="h-40 w-full rounded-t-xl overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.name.en}
+          className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+        />
+      </div>
+    )
   }
+
+  const icon = badgeIcons[project.badge]
+  const isMobile = project.technologies.some((t) => /react native|flutter|android/i.test(t))
+
   return (
-    <div className={`h-36 w-full rounded-t-xl bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}>
-      {/* Abstract lines */}
-      <svg viewBox="0 0 200 80" className="absolute inset-0 w-full h-full opacity-20" aria-hidden="true">
-        <line x1="0" y1="20" x2="200" y2="40" stroke="currentColor" strokeWidth="0.8" />
-        <line x1="0" y1="50" x2="200" y2="20" stroke="currentColor" strokeWidth="0.8" />
-        <circle cx="160" cy="25" r="20" stroke="currentColor" strokeWidth="0.8" fill="none" />
-        <rect x="30" y="30" width="30" height="30" rx="4" stroke="currentColor" strokeWidth="0.8" fill="none" />
-      </svg>
-      <span className="text-3xl relative z-10" role="img" aria-hidden="true">{icons[badge]}</span>
+    <div className={`h-40 w-full rounded-t-xl bg-gradient-to-br ${project.gradient} relative overflow-hidden flex items-end justify-center`}>
+      {/* Soft glows */}
+      <div className="absolute -top-10 -right-10 w-36 h-36 rounded-full bg-white/40 dark:bg-white/10 blur-2xl" aria-hidden="true" />
+      <div className="absolute -bottom-12 -left-12 w-40 h-40 rounded-full bg-white/25 dark:bg-white/5 blur-3xl" aria-hidden="true" />
+
+      {isMobile ? (
+        /* Phone mockup */
+        <div className="relative z-10 w-24 translate-y-4 rounded-t-[1.35rem] bg-card border border-divider shadow-xl p-1.5 pb-0 group-hover:translate-y-2 transition-transform duration-500">
+          <div className="rounded-t-[1rem] bg-subtle h-32 flex flex-col items-center pt-2.5 gap-2.5 overflow-hidden">
+            <div className="w-8 h-1 rounded-full bg-divider" />
+            <span className="text-2xl" role="img" aria-hidden="true">{icon}</span>
+            <div className="w-14 h-1.5 rounded-full bg-divider" />
+            <div className="w-9 h-1.5 rounded-full bg-divider" />
+            <div className="grid grid-cols-2 gap-1.5 px-2 w-full">
+              <div className="h-6 rounded-md bg-card border border-divider" />
+              <div className="h-6 rounded-md bg-card border border-divider" />
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* Browser mockup */
+        <div className="relative z-10 w-[80%] translate-y-3 rounded-t-lg bg-card border border-divider shadow-xl overflow-hidden group-hover:translate-y-1.5 transition-transform duration-500">
+          <div className="flex items-center gap-1.5 px-3 py-2 border-b border-divider bg-subtle">
+            <span className="w-2 h-2 rounded-full bg-rose-300" />
+            <span className="w-2 h-2 rounded-full bg-amber-300" />
+            <span className="w-2 h-2 rounded-full bg-emerald-300" />
+            <span className="ml-2 h-2 flex-1 max-w-[55%] rounded-full bg-divider" />
+          </div>
+          <div className="px-4 py-3 flex items-center gap-3">
+            <span className="text-2xl" role="img" aria-hidden="true">{icon}</span>
+            <div className="flex-1 space-y-2">
+              <div className="h-2 w-3/4 rounded-full bg-divider" />
+              <div className="h-2 w-1/2 rounded-full bg-divider/70" />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -66,7 +111,7 @@ export default function Projects({ lang }: ProjectsProps) {
                 className="bg-card rounded-xl border border-divider overflow-hidden flex flex-col group hover:border-accent/40 transition-colors duration-300"
                 style={{ boxShadow: 'var(--shadow)' }}
               >
-                <ProjectVisual gradient={project.gradient} badge={project.badge} />
+                <ProjectVisual project={project} />
 
                 <div className="p-5 flex flex-col flex-1">
                   {/* Badges row */}
@@ -109,14 +154,35 @@ export default function Projects({ lang }: ProjectsProps) {
                     )}
                   </div>
 
-                  {/* View Details button */}
-                  <button
-                    onClick={() => setSelected(project)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-h transition-colors duration-200 self-start"
-                  >
-                    <ExternalLink size={13} />
-                    {sectionLabels.viewDetails[lang]}
-                  </button>
+                  {/* View Details + code link / private note */}
+                  <div className="flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => setSelected(project)}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-h transition-colors duration-200"
+                    >
+                      <ExternalLink size={13} />
+                      {sectionLabels.viewDetails[lang]}
+                    </button>
+
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.name[lang]} — GitHub`}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-2 hover:text-ink transition-colors duration-200"
+                      >
+                        <FaGithub size={14} />
+                        GitHub
+                      </a>
+                    )}
+                    {project.privateCode && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-ink-3">
+                        <Lock size={11} />
+                        {sectionLabels.privateCode[lang]}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             )

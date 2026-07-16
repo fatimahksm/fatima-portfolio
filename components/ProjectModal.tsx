@@ -1,7 +1,8 @@
 'use client'
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, CheckCircle2 } from 'lucide-react'
+import { X, CheckCircle2, Lock } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 import type { Lang, Project } from '@/types'
 import { sectionLabels } from '@/data/siteData'
 
@@ -145,6 +146,25 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
                   ))}
                 </ul>
               </div>
+
+              {/* Source code link / private note */}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-subtle border border-divider text-ink hover:border-accent/40 hover:text-accent transition-colors duration-200"
+                >
+                  <FaGithub size={16} />
+                  {sectionLabels.viewCode[lang]}
+                </a>
+              )}
+              {project.privateCode && (
+                <p className="inline-flex items-center gap-2 text-sm text-ink-3">
+                  <Lock size={14} />
+                  {sectionLabels.privateCode[lang]}
+                </p>
+              )}
             </div>
           </motion.div>
         </motion.div>

@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Mail, MessageCircle, Download } from 'lucide-react'
+import { Mail, Download } from 'lucide-react'
 import { FaLinkedin } from 'react-icons/fa'
 import type { Lang } from '@/types'
 import { contactContent, sectionLabels } from '@/data/siteData'
@@ -13,14 +13,12 @@ interface ContactProps {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const iconMap: Record<string, React.FC<any>> = {
   email: Mail,
-  whatsapp: MessageCircle,
   linkedin: FaLinkedin,
   cv: Download,
 }
 
 const buttonVariants: Record<string, string> = {
   email: 'bg-accent text-page hover:bg-accent-h',
-  whatsapp: 'bg-card border border-divider text-ink-2 hover:border-accent hover:text-accent',
   linkedin: 'bg-card border border-divider text-ink-2 hover:border-accent hover:text-accent',
   cv: 'bg-card border border-divider text-ink-2 hover:border-accent hover:text-accent',
 }

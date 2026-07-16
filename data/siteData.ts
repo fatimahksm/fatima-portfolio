@@ -5,8 +5,6 @@ import type { NavItem, Project, ExperienceItem, SkillCategory, EducationItem } f
 export const commonLinks = {
   email: 'kassemf96@gmail.com',
   emailLink: 'mailto:kassemf96@gmail.com',
-  phone: '+961 81 639 234',
-  whatsapp: 'https://wa.me/96181639234',
   linkedin:
     'https://www.linkedin.com/in/fatima-kassem-4711382b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
   cv: '/Fatima_Kassem_CV.pdf',
@@ -43,13 +41,13 @@ export const heroContent = {
   typingTexts: {
     en: [
       'Full Stack Web & Mobile Developer',
-      'React Native Developer',
+      'Flutter Developer',
       'Spring Boot Developer',
       'Frontend & Backend Developer',
     ],
     fr: [
       'Développeuse Full Stack Web & Mobile',
-      'Développeuse React Native',
+      'Développeuse Flutter',
       'Développeuse Spring Boot',
       'Développeuse Frontend & Backend',
     ],
@@ -65,8 +63,8 @@ export const heroContent = {
 
 export const aboutContent = {
   text: {
-    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently pursuing Master 1 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. I focus on building practical, elegant, and scalable digital solutions across web and mobile platforms, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
-    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, actuellement en Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
+    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently working at a software company on a Flutter mobile product while pursuing Master 1 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. I focus on building practical, elegant, and scalable digital solutions across web and mobile platforms, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
+    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
   },
   stats: [
     { value: '5+', label: { en: 'Projects', fr: 'Projets' } },
@@ -80,6 +78,19 @@ export const aboutContent = {
 
 export const experiences: ExperienceItem[] = [
   {
+    id: 'confidential',
+    title: { en: 'Full-Stack Developer — Software Company', fr: 'Développeuse Full Stack — Société de Logiciels' },
+    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
+    status: { en: 'Current Position', fr: 'Poste actuel' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
+    description: {
+      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. Also supervised around 10 interns across three internal projects (Feb – May 2026), reviewing their code, guiding their development process, and helping them resolve technical problems. The company and project names remain confidential.",
+      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. J'ai également encadré une dizaine de stagiaires sur trois projets internes (février – mai 2026) : revue de code, accompagnement du processus de développement et aide à la résolution de problèmes techniques. Les noms de la société et des projets restent confidentiels.",
+    },
+    badge: 'confidential',
+  },
+  {
     id: 'ecommerce-client',
     title: { en: 'Client E-commerce Project', fr: 'Projet E-commerce Client' },
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
@@ -88,22 +99,10 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Solo', fr: 'Individuel' },
     technologies: ['Next.js', 'Java Spring Boot'],
     description: {
-      en: 'Independently developed a professional e-commerce web application focused on product browsing, product details, categories, admin dashboard, search, filters, and responsive design.',
-      fr: "Développement indépendant d'une application web e-commerce professionnelle axée sur la consultation des produits, les détails produits, les catégories, le tableau de bord administrateur, la recherche, les filtres et le design responsive.",
+      en: 'Handled a real client engagement end to end as the sole developer — from understanding the requirements and structuring the interface to building the backend APIs and delivering a production-ready result to the client.',
+      fr: "Prise en charge complète d'une mission client réelle en tant que seule développeuse — de la compréhension des besoins et la structuration de l'interface jusqu'à la construction des APIs backend et la livraison d'un résultat prêt pour la production.",
     },
     badge: 'client',
-  },
-  {
-    id: 'confidential',
-    title: { en: 'Ongoing Confidential Full-Stack Project', fr: 'Projet Full Stack Confidentiel en Cours' },
-    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    status: { en: 'Confidential — In Progress', fr: 'Confidentiel — En cours' },
-    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
-    description: {
-      en: 'Currently collaborating on a private software development project. Project details remain confidential, while the work reflects real-world full-stack development experience.',
-      fr: "Collaboration actuelle sur un projet logiciel privé. Les détails du projet restent confidentiels, tandis que le travail reflète une expérience réelle en développement full stack.",
-    },
-    badge: 'confidential',
   },
   {
     id: 'nutribite-internship',
@@ -116,8 +115,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Solo', fr: 'Individuel' },
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
     description: {
-      en: 'Designed and developed NutriBite independently as a full-stack web platform, covering frontend, backend, database integration, and multi-role system features.',
-      fr: "Conception et développement de NutriBite de manière indépendante en tant que plateforme web full stack, incluant le frontend, le backend, l'intégration de la base de données et les fonctionnalités multi-rôles.",
+      en: 'During my internship at Laptop, I was trusted to build the NutriBite platform on my own — planning the structure, implementing the React frontend and Node.js backend, and delivering a working multi-role platform by the end of the internship.',
+      fr: "Durant mon stage chez Laptop, on m'a confié la construction de la plateforme NutriBite en autonomie — de la planification de la structure à l'implémentation du frontend React et du backend Node.js, jusqu'à la livraison d'une plateforme multi-rôles fonctionnelle à la fin du stage.",
     },
     badge: 'internship',
   },
@@ -132,8 +131,8 @@ export const experiences: ExperienceItem[] = [
     workType: { en: 'Team Project', fr: 'Projet en équipe' },
     technologies: ['React Native', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: 'Contributed as part of a development team, focusing on React Native mobile development, Spring Boot backend APIs, and payment integration features.',
-      fr: "Participation au sein d'une équipe de développement, avec une contribution principale au développement mobile React Native, aux APIs backend avec Spring Boot et aux fonctionnalités de paiement.",
+      en: 'Worked inside a real development team with Git-based collaboration — my main responsibilities were React Native screens, Spring Boot backend endpoints, and the payment integration for the Hobby Sphere app.',
+      fr: "Travail au sein d'une véritable équipe de développement avec une collaboration basée sur Git — mes responsabilités principales : les écrans React Native, les endpoints backend Spring Boot et l'intégration des paiements pour l'application Hobby Sphere.",
     },
     badge: 'internship',
   },
@@ -142,6 +141,27 @@ export const experiences: ExperienceItem[] = [
 // ─── Projects ─────────────────────────────────────────────────────────────────
 
 export const projects: Project[] = [
+  {
+    id: 'confidential',
+    name: { en: 'Company Mobile App — Confidential', fr: "Application Mobile d'Entreprise — Confidentielle" },
+    type: { en: 'Company Project', fr: "Projet d'Entreprise" },
+    status: { en: 'In Progress', fr: 'En cours' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
+    description: {
+      en: 'A cross-platform mobile application I am currently building as part of my role at a software company, using Flutter with a Java Spring Boot and PostgreSQL backend. The company and product details remain confidential.',
+      fr: "Application mobile multiplateforme que je développe actuellement dans le cadre de mon poste dans une société de logiciels, avec Flutter et un backend Java Spring Boot / PostgreSQL. Les détails de la société et du produit restent confidentiels.",
+    },
+    features: {
+      en: ['Confidential'],
+      fr: ['Confidentiel'],
+    },
+    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
+    teamInfo: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    badge: 'confidential',
+    gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
+    privateCode: true,
+  },
   {
     id: 'ecommerce',
     name: { en: 'Client E-commerce Project', fr: 'Projet E-commerce Client' },
@@ -162,6 +182,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'client',
     gradient: 'from-stone-300/45 via-neutral-200/30 to-stone-200/40',
+    privateCode: true,
   },
   {
     id: 'hobbysphere',
@@ -186,6 +207,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Team Project', fr: 'Projet en équipe' },
     badge: 'team',
     gradient: 'from-rose-300/45 via-pink-200/25 to-rose-200/35',
+    githubUrl: 'https://github.com/fatimahh0/HobbySphereMobile',
   },
   {
     id: 'nutribite',
@@ -207,6 +229,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'solo',
     gradient: 'from-teal-300/45 via-emerald-200/25 to-teal-200/35',
+    githubUrl: 'https://github.com/fatimahksm/nutribite',
   },
   {
     id: 'unify',
@@ -228,26 +251,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'University Project', fr: 'Projet universitaire' },
     badge: 'university',
     gradient: 'from-blue-300/45 via-indigo-200/25 to-blue-200/35',
-  },
-  {
-    id: 'confidential',
-    name: { en: 'Ongoing Confidential Full-Stack Project', fr: 'Projet Full Stack Confidentiel en Cours' },
-    type: { en: 'Confidential Project', fr: 'Projet Confidentiel' },
-    status: { en: 'Confidential — In Progress', fr: 'Confidentiel — En cours' },
-    workType: { en: 'Private Project', fr: 'Projet privé' },
-    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
-    description: {
-      en: 'Currently collaborating on a private software development project. Project details remain confidential, while the work reflects real-world full-stack development experience.',
-      fr: "Collaboration actuelle sur un projet logiciel privé. Les détails du projet restent confidentiels, tandis que le travail reflète une expérience réelle en développement full stack.",
-    },
-    features: {
-      en: ['Confidential'],
-      fr: ['Confidentiel'],
-    },
-    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    teamInfo: { en: 'Private Project', fr: 'Projet privé' },
-    badge: 'confidential',
-    gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
+    githubUrl: 'https://github.com/fatimahksm/Unify',
   },
 ]
 
@@ -311,8 +315,8 @@ export const education: EducationItem[] = [
 
 export const contactContent = {
   text: {
-    en: "I'm open to internships, junior developer roles, freelance projects, and collaboration opportunities.",
-    fr: "Je suis ouverte aux stages, aux postes de développeuse junior, aux projets freelance et aux opportunités de collaboration.",
+    en: "I'm currently working full-time as a Full Stack Developer — and open to freelance projects.",
+    fr: "Je travaille actuellement à temps plein comme développeuse Full Stack — et je suis ouverte aux projets freelance.",
   },
   heading: {
     en: "Let's Connect",
@@ -320,7 +324,6 @@ export const contactContent = {
   },
   buttons: [
     { key: 'email', en: 'Email', fr: 'Email', href: commonLinks.emailLink },
-    { key: 'whatsapp', en: 'WhatsApp', fr: 'WhatsApp', href: commonLinks.whatsapp },
     { key: 'linkedin', en: 'LinkedIn', fr: 'LinkedIn', href: commonLinks.linkedin },
     { key: 'cv', en: 'Download CV', fr: 'Télécharger CV', href: commonLinks.cv },
   ],
@@ -342,4 +345,6 @@ export const sectionLabels = {
   technologies: { en: 'Technologies', fr: 'Technologies' },
   status: { en: 'Status', fr: 'Statut' },
   team: { en: 'Team', fr: 'Équipe' },
+  viewCode: { en: 'View Code', fr: 'Voir le Code' },
+  privateCode: { en: 'Private client project', fr: 'Projet client privé' },
 }
