@@ -78,6 +78,19 @@ export const aboutContent = {
 
 export const experiences: ExperienceItem[] = [
   {
+    id: 'confidential',
+    title: { en: 'Full-Stack Developer — Software Company', fr: 'Développeuse Full Stack — Société de Logiciels' },
+    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
+    status: { en: 'Current Position', fr: 'Poste actuel' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
+    description: {
+      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. The company and project names remain confidential.",
+      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. Les noms de la société et du projet restent confidentiels.",
+    },
+    badge: 'confidential',
+  },
+  {
     id: 'ecommerce-client',
     title: { en: 'Client E-commerce Project', fr: 'Projet E-commerce Client' },
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
@@ -90,19 +103,6 @@ export const experiences: ExperienceItem[] = [
       fr: "Prise en charge complète d'une mission client réelle en tant que seule développeuse — de la compréhension des besoins et la structuration de l'interface jusqu'à la construction des APIs backend et la livraison d'un résultat prêt pour la production.",
     },
     badge: 'client',
-  },
-  {
-    id: 'confidential',
-    title: { en: 'Full-Stack Developer — Software Company', fr: 'Développeuse Full Stack — Société de Logiciels' },
-    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    status: { en: 'Current Position', fr: 'Poste actuel' },
-    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
-    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
-    description: {
-      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. The company and project names remain confidential.",
-      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. Les noms de la société et du projet restent confidentiels.",
-    },
-    badge: 'confidential',
   },
   {
     id: 'nutribite-internship',
@@ -141,6 +141,27 @@ export const experiences: ExperienceItem[] = [
 // ─── Projects ─────────────────────────────────────────────────────────────────
 
 export const projects: Project[] = [
+  {
+    id: 'confidential',
+    name: { en: 'Company Mobile App — Confidential', fr: "Application Mobile d'Entreprise — Confidentielle" },
+    type: { en: 'Company Project', fr: "Projet d'Entreprise" },
+    status: { en: 'In Progress', fr: 'En cours' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
+    description: {
+      en: 'A cross-platform mobile application I am currently building as part of my role at a software company, using Flutter with a Java Spring Boot and PostgreSQL backend. The company and product details remain confidential.',
+      fr: "Application mobile multiplateforme que je développe actuellement dans le cadre de mon poste dans une société de logiciels, avec Flutter et un backend Java Spring Boot / PostgreSQL. Les détails de la société et du produit restent confidentiels.",
+    },
+    features: {
+      en: ['Confidential'],
+      fr: ['Confidentiel'],
+    },
+    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
+    teamInfo: { en: 'Company Team', fr: "Équipe d'entreprise" },
+    badge: 'confidential',
+    gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
+    privateCode: true,
+  },
   {
     id: 'ecommerce',
     name: { en: 'Client E-commerce Project', fr: 'Projet E-commerce Client' },
@@ -231,27 +252,6 @@ export const projects: Project[] = [
     gradient: 'from-blue-300/45 via-indigo-200/25 to-blue-200/35',
     githubUrl: 'https://github.com/fatimahksm/Unify',
   },
-  {
-    id: 'confidential',
-    name: { en: 'Company Mobile App — Confidential', fr: "Application Mobile d'Entreprise — Confidentielle" },
-    type: { en: 'Company Project', fr: "Projet d'Entreprise" },
-    status: { en: 'In Progress', fr: 'En cours' },
-    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
-    technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
-    description: {
-      en: 'A cross-platform mobile application I am currently building as part of my role at a software company, using Flutter with a Java Spring Boot and PostgreSQL backend. The company and product details remain confidential.',
-      fr: "Application mobile multiplateforme que je développe actuellement dans le cadre de mon poste dans une société de logiciels, avec Flutter et un backend Java Spring Boot / PostgreSQL. Les détails de la société et du produit restent confidentiels.",
-    },
-    features: {
-      en: ['Confidential'],
-      fr: ['Confidentiel'],
-    },
-    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    teamInfo: { en: 'Company Team', fr: "Équipe d'entreprise" },
-    badge: 'confidential',
-    gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
-    privateCode: true,
-  },
 ]
 
 // ─── Skills ───────────────────────────────────────────────────────────────────
@@ -314,8 +314,8 @@ export const education: EducationItem[] = [
 
 export const contactContent = {
   text: {
-    en: "I'm open to internships, junior developer roles, freelance projects, and collaboration opportunities.",
-    fr: "Je suis ouverte aux stages, aux postes de développeuse junior, aux projets freelance et aux opportunités de collaboration.",
+    en: "I'm currently working full-time as a Full Stack Developer — and open to freelance projects.",
+    fr: "Je travaille actuellement à temps plein comme développeuse Full Stack — et je suis ouverte aux projets freelance.",
   },
   heading: {
     en: "Let's Connect",

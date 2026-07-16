@@ -53,14 +53,6 @@ export default function Navbar({ theme, toggleTheme, lang, toggleLang, mounted }
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between">
-          {/* Logo */}
-          <button
-            onClick={() => scrollTo('home')}
-            className="text-lg font-bold text-ink tracking-tight hover:text-accent transition-colors duration-200"
-          >
-            FK<span className="text-accent">.</span>
-          </button>
-
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
@@ -121,8 +113,8 @@ export default function Navbar({ theme, toggleTheme, lang, toggleLang, mounted }
           >
             {/* Header row */}
             <div className="flex items-center justify-between px-6 h-[68px] border-b border-divider">
-              <span className="text-lg font-bold text-ink">
-                FK<span className="text-accent">.</span>
+              <span className="text-base font-semibold text-ink">
+                {personalInfo.name}
               </span>
               <div className="flex items-center gap-2">
                 <button
