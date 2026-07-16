@@ -52,9 +52,9 @@ export default function Navbar({ theme, toggleTheme, lang, toggleLang, mounted }
           scrolled ? 'nav-blur' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between">
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-end">
+          {/* Desktop nav — centered in the bar */}
+          <nav className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
             {navItems.map((item) => (
               <button
                 key={item.id}
