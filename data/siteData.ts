@@ -229,6 +229,7 @@ export const projects: Project[] = [
     teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
     badge: 'solo',
     gradient: 'from-teal-300/45 via-emerald-200/25 to-teal-200/35',
+    githubUrl: 'https://github.com/fatimahksm/nutribite',
   },
   {
     id: 'unify',
