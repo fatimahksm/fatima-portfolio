@@ -63,8 +63,8 @@ export const heroContent = {
 
 export const aboutContent = {
   text: {
-    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently pursuing Master 1 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. I focus on building practical, elegant, and scalable digital solutions across web and mobile platforms, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
-    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, actuellement en Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
+    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently working at a software company on a Flutter mobile product while pursuing Master 1 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. I focus on building practical, elegant, and scalable digital solutions across web and mobile platforms, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
+    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
   },
   stats: [
     { value: '5+', label: { en: 'Projects', fr: 'Projets' } },
@@ -93,13 +93,14 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 'confidential',
-    title: { en: 'Ongoing Confidential Full-Stack Project', fr: 'Projet Full Stack Confidentiel en Cours' },
+    title: { en: 'Full-Stack Developer — Software Company', fr: 'Développeuse Full Stack — Société de Logiciels' },
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    status: { en: 'Confidential — In Progress', fr: 'Confidentiel — En cours' },
+    status: { en: 'Current Position', fr: 'Poste actuel' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
     technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: 'Currently working as a full-stack developer on a private client project, taking features from design to delivery across a Flutter mobile app and a Spring Boot / PostgreSQL backend. Project details remain confidential.',
-      fr: "Développeuse full stack sur un projet client privé en cours, en charge de fonctionnalités de la conception à la livraison, sur une application mobile Flutter et un backend Spring Boot / PostgreSQL. Les détails du projet restent confidentiels.",
+      en: "Currently employed at a software company, working with the team on the company's mobile product — a Flutter application backed by Java Spring Boot and PostgreSQL. The company and project names remain confidential.",
+      fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. Les noms de la société et du projet restent confidentiels.",
     },
     badge: 'confidential',
   },
@@ -232,21 +233,21 @@ export const projects: Project[] = [
   },
   {
     id: 'confidential',
-    name: { en: 'Ongoing Confidential Full-Stack Project', fr: 'Projet Full Stack Confidentiel en Cours' },
-    type: { en: 'Confidential Project', fr: 'Projet Confidentiel' },
-    status: { en: 'Confidential — In Progress', fr: 'Confidentiel — En cours' },
-    workType: { en: 'Private Project', fr: 'Projet privé' },
+    name: { en: 'Company Mobile App — Confidential', fr: "Application Mobile d'Entreprise — Confidentielle" },
+    type: { en: 'Company Project', fr: "Projet d'Entreprise" },
+    status: { en: 'In Progress', fr: 'En cours' },
+    workType: { en: 'Company Team', fr: "Équipe d'entreprise" },
     technologies: ['Flutter', 'Java Spring Boot', 'PostgreSQL', 'Git / GitHub'],
     description: {
-      en: 'Currently collaborating on a private software development project. Project details remain confidential, while the work reflects real-world full-stack development experience.',
-      fr: "Collaboration actuelle sur un projet logiciel privé. Les détails du projet restent confidentiels, tandis que le travail reflète une expérience réelle en développement full stack.",
+      en: 'A cross-platform mobile application I am currently building as part of my role at a software company, using Flutter with a Java Spring Boot and PostgreSQL backend. The company and product details remain confidential.',
+      fr: "Application mobile multiplateforme que je développe actuellement dans le cadre de mon poste dans une société de logiciels, avec Flutter et un backend Java Spring Boot / PostgreSQL. Les détails de la société et du produit restent confidentiels.",
     },
     features: {
       en: ['Confidential'],
       fr: ['Confidentiel'],
     },
     role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
-    teamInfo: { en: 'Private Project', fr: 'Projet privé' },
+    teamInfo: { en: 'Company Team', fr: "Équipe d'entreprise" },
     badge: 'confidential',
     gradient: 'from-neutral-300/45 via-gray-200/30 to-zinc-300/40',
     privateCode: true,

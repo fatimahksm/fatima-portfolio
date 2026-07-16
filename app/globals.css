@@ -6,17 +6,17 @@
 /* ── Theme Variables ─────────────────────────────────────────────────────── */
 
 :root {
-  --page:        #FAF7F2;
+  --page:        #F6F1E8;
   --card:        #FFFFFF;
-  --subtle:      #F3EDE4;
-  --divider:     #E7DCCF;
-  --accent:      #C9A98C;
-  --accent-h:    #B89478;
-  --ink:         #2F2A26;
-  --ink-2:       #7A7168;
-  --ink-3:       #AEA79F;
-  --nav-blur:    rgba(250, 247, 242, 0.90);
-  --shadow:      0 1px 3px rgba(47,42,38,0.06), 0 4px 16px rgba(47,42,38,0.05);
+  --subtle:      #EDE5D6;
+  --divider:     #DCCDB8;
+  --accent:      #A67C52;
+  --accent-h:    #8F6844;
+  --ink:         #26211D;
+  --ink-2:       #5C544C;
+  --ink-3:       #8A8178;
+  --nav-blur:    rgba(246, 241, 232, 0.90);
+  --shadow:      0 1px 3px rgba(47,42,38,0.08), 0 4px 16px rgba(47,42,38,0.07);
 }
 
 .dark {
