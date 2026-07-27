@@ -67,11 +67,11 @@ export const aboutContent = {
     fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
   },
   stats: [
-    { value: '5+', label: { en: 'Projects', fr: 'Projets' } },
-    { value: '2', label: { en: 'Internships', fr: 'Stages' } },
-    { value: '1', label: { en: 'Client Project', fr: 'Projet Client' } },
-    { value: '⚡', label: { en: 'Web & Mobile Focus', fr: 'Focus Web & Mobile' } },
-  ],
+    { value: '6+', label: { en: 'Projects', fr: 'Projets' } },
+    { value: '3', label: { en: 'Internships', fr: 'Stages' } },
+    { value: '2', label: { en: 'Client Projects', fr: 'Projets Clients' } },
+    { icon: 'devices', label: { en: 'Web & Mobile Focus', fr: 'Focus Web & Mobile' } },
+  ] as { value?: string; icon?: string; label: { en: string; fr: string } }[],
 }
 
 // ─── Experience ──────────────────────────────────────────────────────────────
@@ -230,6 +230,30 @@ export const projects: Project[] = [
     badge: 'solo',
     gradient: 'from-teal-300/45 via-emerald-200/25 to-teal-200/35',
     githubUrl: 'https://github.com/fatimahksm/nutribite',
+  },
+  {
+    id: 'brain-mri',
+    name: { en: 'Brain MRI Tumor Classification', fr: 'Classification de Tumeurs par IRM Cérébrale' },
+    type: { en: 'University Project', fr: 'Projet Universitaire' },
+    year: '2025',
+    status: { en: 'Completed', fr: 'Terminé' },
+    workType: { en: 'Team Project', fr: 'Projet en équipe' },
+    technologies: ['Python', 'TensorFlow', 'Keras', 'Convolutional Neural Network'],
+    description: {
+      en: 'A machine-learning project built with a university team, training a convolutional neural network to classify brain MRI scans and flag the presence of a tumor.',
+      fr: "Projet de machine learning réalisé avec une équipe universitaire, entraînant un réseau de neurones convolutif pour classifier des IRM cérébrales et détecter la présence d'une tumeur.",
+    },
+    features: {
+      en: ['MRI dataset preparation', 'Image preprocessing', 'CNN model architecture', 'Model training', 'Validation', 'Accuracy evaluation'],
+      fr: ['Préparation du jeu de données IRM', 'Prétraitement des images', 'Architecture du modèle CNN', 'Entraînement du modèle', 'Validation', "Évaluation de la précision"],
+    },
+    role: {
+      en: 'Contributed as part of a university team on the data preparation, model training, and evaluation stages.',
+      fr: "Contribution au sein d'une équipe universitaire sur la préparation des données, l'entraînement du modèle et l'évaluation.",
+    },
+    teamInfo: { en: 'University Team Project', fr: 'Projet universitaire en équipe' },
+    badge: 'university',
+    gradient: 'from-amber-300/45 via-orange-200/25 to-amber-200/35',
   },
   {
     id: 'unify',

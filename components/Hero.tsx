@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { MapPin, Download, Mail, FolderOpen } from 'lucide-react'
 import type { Lang } from '@/types'
 import { heroContent, personalInfo, commonLinks } from '@/data/siteData'
@@ -11,6 +11,18 @@ interface HeroProps {
 
 // Abstract decorative SVG for the hero
 function AbstractVisual() {
+  const reduceMotion = useReducedMotion()
+  // Rotate around the middle of the 400x400 viewBox
+  const spinOrigin = { transformOrigin: '200px 200px', transformBox: 'view-box' as const }
+
+  const spin = (duration: number, reverse = false) =>
+    reduceMotion
+      ? {}
+      : {
+          animate: { rotate: reverse ? -360 : 360 },
+          transition: { repeat: Infinity, duration, ease: 'linear' as const },
+        }
+
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       <svg
@@ -19,21 +31,54 @@ function AbstractVisual() {
         fill="none"
         aria-hidden="true"
       >
-        {/* Outer ring */}
-        <circle cx="200" cy="200" r="180" stroke="var(--accent)" strokeWidth="0.8" strokeDasharray="8 6" opacity="0.4" />
-        {/* Middle ring */}
-        <circle cx="200" cy="200" r="130" stroke="var(--accent)" strokeWidth="0.8" opacity="0.25" />
-        {/* Inner circle */}
-        <circle cx="200" cy="200" r="80" fill="var(--subtle)" />
-        <circle cx="200" cy="200" r="80" stroke="var(--accent)" strokeWidth="1" opacity="0.5" />
-        {/* Code brackets */}
-        <text x="162" y="215" fontSize="42" fontWeight="300" fill="var(--accent)" opacity="0.9" fontFamily="monospace">&lt;/&gt;</text>
-        {/* Dots */}
-        <circle cx="200" cy="52" r="4" fill="var(--accent)" opacity="0.6" />
-        <circle cx="340" cy="160" r="3" fill="var(--accent)" opacity="0.4" />
-        <circle cx="316" cy="316" r="4" fill="var(--accent)" opacity="0.5" />
-        <circle cx="84" cy="316" r="3" fill="var(--accent)" opacity="0.4" />
-        <circle cx="60" cy="160" r="4" fill="var(--accent)" opacity="0.6" />
+        {/* Outer dashed ring + orbiting dots */}
+        <motion.g style={spinOrigin} {...spin(70)}>
+          <circle cx="200" cy="200" r="180" stroke="var(--accent)" strokeWidth="0.8" strokeDasharray="8 6" opacity="0.4" />
+          <circle cx="200" cy="52" r="4" fill="var(--accent)" opacity="0.6" />
+          <circle cx="340" cy="160" r="3" fill="var(--accent)" opacity="0.4" />
+          <circle cx="316" cy="316" r="4" fill="var(--accent)" opacity="0.5" />
+          <circle cx="84" cy="316" r="3" fill="var(--accent)" opacity="0.4" />
+          <circle cx="60" cy="160" r="4" fill="var(--accent)" opacity="0.6" />
+        </motion.g>
+
+        {/* Middle ring drifting the other way */}
+        <motion.g style={spinOrigin} {...spin(48, true)}>
+          <circle
+            cx="200"
+            cy="200"
+            r="130"
+            stroke="var(--accent)"
+            strokeWidth="0.8"
+            strokeDasharray="150 90"
+            opacity="0.3"
+          />
+        </motion.g>
+
+        {/* Radar pulse leaving the core */}
+        {!reduceMotion && (
+          <motion.circle
+            cx="200"
+            cy="200"
+            stroke="var(--accent)"
+            strokeWidth="1"
+            fill="none"
+            initial={{ r: 80, opacity: 0.45 }}
+            animate={{ r: [80, 128], opacity: [0.45, 0] }}
+            transition={{ repeat: Infinity, duration: 3.4, ease: 'easeOut' }}
+          />
+        )}
+
+        {/* Core with the code glyph, breathing gently */}
+        <motion.g
+          style={spinOrigin}
+          animate={reduceMotion ? {} : { scale: [1, 1.035, 1] }}
+          transition={reduceMotion ? {} : { repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+        >
+          <circle cx="200" cy="200" r="80" fill="var(--subtle)" />
+          <circle cx="200" cy="200" r="80" stroke="var(--accent)" strokeWidth="1" opacity="0.5" />
+          <text x="162" y="215" fontSize="42" fontWeight="300" fill="var(--accent)" opacity="0.9" fontFamily="monospace">&lt;/&gt;</text>
+        </motion.g>
+
         {/* Corner accents */}
         <line x1="30" y1="30" x2="60" y2="30" stroke="var(--accent)" strokeWidth="1.5" opacity="0.5" />
         <line x1="30" y1="30" x2="30" y2="60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.5" />
@@ -80,9 +125,9 @@ export default function Hero({ lang }: HeroProps) {
           <div>
             {/* Location pill */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.35, delay: 0.05 }}
               className="inline-flex items-center gap-1.5 text-xs font-medium text-ink-2 bg-subtle border border-divider rounded-full px-3 py-1.5 mb-6"
             >
               <MapPin size={12} className="text-accent" />
@@ -91,9 +136,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink leading-[1.18] tracking-tight mb-6"
             >
               {heading[lang]}
@@ -101,9 +146,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Typing text */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.35, delay: 0.18 }}
               className="text-base sm:text-lg font-medium text-accent mb-8 h-7"
             >
               <TypingText texts={typingTexts[lang]} />
@@ -111,9 +156,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.55 }}
+              transition={{ duration: 0.35, delay: 0.26 }}
               className="flex flex-wrap gap-3"
             >
               <button
@@ -145,9 +190,9 @@ export default function Hero({ lang }: HeroProps) {
 
           {/* Right: Abstract visual */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
             className="hidden lg:flex justify-center items-center"
           >
             <AbstractVisual />
@@ -159,7 +204,7 @@ export default function Hero({ lang }: HeroProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+        transition={{ delay: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
       >
         <span className="text-xs text-ink-3 tracking-widest uppercase">scroll</span>

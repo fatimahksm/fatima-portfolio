@@ -21,10 +21,10 @@ export default function Education({ lang }: EducationProps) {
             return (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.55, delay: i * 0.12, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+                transition={{ duration: 0.35, delay: i * 0.05, ease: 'easeOut' }}
                 className="bg-card rounded-xl border border-divider p-6 relative overflow-hidden"
                 style={{ boxShadow: 'var(--shadow)' }}
               >
