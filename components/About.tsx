@@ -34,7 +34,7 @@ export default function About({ lang }: AboutProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '0px 0px 120px 0px' }}
             transition={{ duration: 0.38, ease: 'easeOut' }}
-            className="relative mx-auto md:mx-0 w-[230px] md:w-full"
+            className="relative mx-auto md:mx-0 w-[230px] md:w-full md:-mt-8"
           >
             {/* Ambient light behind the cut-out — a soft falloff, never a visible edge */}
             <motion.div
