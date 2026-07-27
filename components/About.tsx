@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import type { Lang } from '@/types'
 import { aboutContent, personalInfo, sectionLabels } from '@/data/siteData'
 import SectionHeader from './SectionHeader'
@@ -20,6 +20,8 @@ const itemVariants = {
 }
 
 export default function About({ lang }: AboutProps) {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section id="about" className="py-24 bg-subtle">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -34,30 +36,33 @@ export default function About({ lang }: AboutProps) {
             transition={{ duration: 0.38, ease: 'easeOut' }}
             className="relative mx-auto md:mx-0 w-[230px] md:w-full"
           >
-            {/* Warm disc behind the portrait — keeps the silhouette readable in both themes */}
-            <div
+            {/* Warm glow behind the frame, breathing slowly */}
+            <motion.div
               aria-hidden="true"
-              className="absolute left-1/2 -translate-x-1/2 top-[17%] w-[96%] aspect-square rounded-full
-                         bg-gradient-to-br from-accent/35 via-accent/15 to-accent/5"
-            />
-            {/* Soft halo */}
-            <div
-              aria-hidden="true"
-              className="absolute left-1/2 -translate-x-1/2 top-[13%] w-full aspect-square rounded-full bg-accent/10 blur-2xl"
+              className="absolute -inset-3 rounded-[28px] bg-accent/15 blur-xl"
+              animate={reduceMotion ? {} : { opacity: [0.6, 1, 0.6], scale: [1, 1.03, 1] }}
+              transition={reduceMotion ? {} : { repeat: Infinity, duration: 6.5, ease: 'easeInOut' }}
             />
 
-            <Image
-              src="/fatima-kassem.png"
-              alt={personalInfo.name}
-              width={720}
-              height={900}
-              sizes="(max-width: 768px) 230px, 280px"
-              className="relative w-full h-auto"
-              style={{
-                WebkitMaskImage: 'linear-gradient(to bottom, #000 84%, transparent 100%)',
-                maskImage: 'linear-gradient(to bottom, #000 84%, transparent 100%)',
-              }}
-            />
+            <div
+              className="relative rounded-2xl overflow-hidden border border-divider"
+              style={{ boxShadow: 'var(--shadow)' }}
+            >
+              {/* Very slow drift so the photo feels alive without distracting */}
+              <motion.div
+                animate={reduceMotion ? {} : { scale: [1, 1.06, 1] }}
+                transition={reduceMotion ? {} : { repeat: Infinity, duration: 18, ease: 'easeInOut' }}
+              >
+                <Image
+                  src="/fatima-portrait.jpg"
+                  alt={personalInfo.name}
+                  width={720}
+                  height={900}
+                  sizes="(max-width: 768px) 230px, 280px"
+                  className="w-full h-auto"
+                />
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* Text + stats */}
