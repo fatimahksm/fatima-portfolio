@@ -70,8 +70,8 @@ export default function About({ lang }: AboutProps) {
               <Image
                 src="/fatima-portrait-cutout.png"
                 alt={personalInfo.name}
-                width={720}
-                height={900}
+                width={668}
+                height={814}
                 sizes="(max-width: 768px) 230px, 280px"
                 className="w-full h-auto"
               />
