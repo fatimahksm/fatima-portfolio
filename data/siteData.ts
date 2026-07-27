@@ -232,6 +232,30 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/fatimahksm/nutribite',
   },
   {
+    id: 'brain-mri',
+    name: { en: 'Brain MRI Tumor Classification', fr: 'Classification de Tumeurs par IRM Cérébrale' },
+    type: { en: 'University Project', fr: 'Projet Universitaire' },
+    year: '2025',
+    status: { en: 'Completed', fr: 'Terminé' },
+    workType: { en: 'Team Project', fr: 'Projet en équipe' },
+    technologies: ['Python', 'TensorFlow', 'Keras', 'Convolutional Neural Network'],
+    description: {
+      en: 'A machine-learning project built with a university team, training a convolutional neural network to classify brain MRI scans and flag the presence of a tumor.',
+      fr: "Projet de machine learning réalisé avec une équipe universitaire, entraînant un réseau de neurones convolutif pour classifier des IRM cérébrales et détecter la présence d'une tumeur.",
+    },
+    features: {
+      en: ['MRI dataset preparation', 'Image preprocessing', 'CNN model architecture', 'Model training', 'Validation', 'Accuracy evaluation'],
+      fr: ['Préparation du jeu de données IRM', 'Prétraitement des images', 'Architecture du modèle CNN', 'Entraînement du modèle', 'Validation', "Évaluation de la précision"],
+    },
+    role: {
+      en: 'Contributed as part of a university team on the data preparation, model training, and evaluation stages.',
+      fr: "Contribution au sein d'une équipe universitaire sur la préparation des données, l'entraînement du modèle et l'évaluation.",
+    },
+    teamInfo: { en: 'University Team Project', fr: 'Projet universitaire en équipe' },
+    badge: 'university',
+    gradient: 'from-amber-300/45 via-orange-200/25 to-amber-200/35',
+  },
+  {
     id: 'unify',
     name: { en: 'Unify — University Mobile App', fr: 'Unify — Application Mobile Universitaire' },
     type: { en: 'University Project', fr: 'Projet Universitaire' },
