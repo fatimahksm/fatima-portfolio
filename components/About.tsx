@@ -32,26 +32,32 @@ export default function About({ lang }: AboutProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '0px 0px 120px 0px' }}
             transition={{ duration: 0.38, ease: 'easeOut' }}
-            className="relative mx-auto md:mx-0 w-[220px] md:w-full"
+            className="relative mx-auto md:mx-0 w-[230px] md:w-full"
           >
-            {/* Soft accent glow behind the frame */}
+            {/* Warm disc behind the portrait — keeps the silhouette readable in both themes */}
             <div
-              className="absolute -inset-3 rounded-3xl bg-accent/10 blur-xl"
               aria-hidden="true"
+              className="absolute left-1/2 -translate-x-1/2 top-[17%] w-[96%] aspect-square rounded-full
+                         bg-gradient-to-br from-accent/35 via-accent/15 to-accent/5"
             />
+            {/* Soft halo */}
             <div
-              className="relative rounded-2xl overflow-hidden border border-divider"
-              style={{ boxShadow: 'var(--shadow)' }}
-            >
-              <Image
-                src="/fatima-kassem.jpg"
-                alt={personalInfo.name}
-                width={720}
-                height={900}
-                sizes="(max-width: 768px) 220px, 280px"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+              aria-hidden="true"
+              className="absolute left-1/2 -translate-x-1/2 top-[13%] w-full aspect-square rounded-full bg-accent/10 blur-2xl"
+            />
+
+            <Image
+              src="/fatima-kassem.png"
+              alt={personalInfo.name}
+              width={720}
+              height={900}
+              sizes="(max-width: 768px) 230px, 280px"
+              className="relative w-full h-auto"
+              style={{
+                WebkitMaskImage: 'linear-gradient(to bottom, #000 84%, transparent 100%)',
+                maskImage: 'linear-gradient(to bottom, #000 84%, transparent 100%)',
+              }}
+            />
           </motion.div>
 
           {/* Text + stats */}

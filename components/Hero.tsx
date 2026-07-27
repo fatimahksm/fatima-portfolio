@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { MapPin, Download, Mail, FolderOpen } from 'lucide-react'
 import type { Lang } from '@/types'
 import { heroContent, personalInfo, commonLinks } from '@/data/siteData'
@@ -11,6 +11,18 @@ interface HeroProps {
 
 // Abstract decorative SVG for the hero
 function AbstractVisual() {
+  const reduceMotion = useReducedMotion()
+  // Rotate around the middle of the 400x400 viewBox
+  const spinOrigin = { transformOrigin: '200px 200px', transformBox: 'view-box' as const }
+
+  const spin = (duration: number, reverse = false) =>
+    reduceMotion
+      ? {}
+      : {
+          animate: { rotate: reverse ? -360 : 360 },
+          transition: { repeat: Infinity, duration, ease: 'linear' as const },
+        }
+
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       <svg
@@ -19,21 +31,54 @@ function AbstractVisual() {
         fill="none"
         aria-hidden="true"
       >
-        {/* Outer ring */}
-        <circle cx="200" cy="200" r="180" stroke="var(--accent)" strokeWidth="0.8" strokeDasharray="8 6" opacity="0.4" />
-        {/* Middle ring */}
-        <circle cx="200" cy="200" r="130" stroke="var(--accent)" strokeWidth="0.8" opacity="0.25" />
-        {/* Inner circle */}
-        <circle cx="200" cy="200" r="80" fill="var(--subtle)" />
-        <circle cx="200" cy="200" r="80" stroke="var(--accent)" strokeWidth="1" opacity="0.5" />
-        {/* Code brackets */}
-        <text x="162" y="215" fontSize="42" fontWeight="300" fill="var(--accent)" opacity="0.9" fontFamily="monospace">&lt;/&gt;</text>
-        {/* Dots */}
-        <circle cx="200" cy="52" r="4" fill="var(--accent)" opacity="0.6" />
-        <circle cx="340" cy="160" r="3" fill="var(--accent)" opacity="0.4" />
-        <circle cx="316" cy="316" r="4" fill="var(--accent)" opacity="0.5" />
-        <circle cx="84" cy="316" r="3" fill="var(--accent)" opacity="0.4" />
-        <circle cx="60" cy="160" r="4" fill="var(--accent)" opacity="0.6" />
+        {/* Outer dashed ring + orbiting dots */}
+        <motion.g style={spinOrigin} {...spin(70)}>
+          <circle cx="200" cy="200" r="180" stroke="var(--accent)" strokeWidth="0.8" strokeDasharray="8 6" opacity="0.4" />
+          <circle cx="200" cy="52" r="4" fill="var(--accent)" opacity="0.6" />
+          <circle cx="340" cy="160" r="3" fill="var(--accent)" opacity="0.4" />
+          <circle cx="316" cy="316" r="4" fill="var(--accent)" opacity="0.5" />
+          <circle cx="84" cy="316" r="3" fill="var(--accent)" opacity="0.4" />
+          <circle cx="60" cy="160" r="4" fill="var(--accent)" opacity="0.6" />
+        </motion.g>
+
+        {/* Middle ring drifting the other way */}
+        <motion.g style={spinOrigin} {...spin(48, true)}>
+          <circle
+            cx="200"
+            cy="200"
+            r="130"
+            stroke="var(--accent)"
+            strokeWidth="0.8"
+            strokeDasharray="150 90"
+            opacity="0.3"
+          />
+        </motion.g>
+
+        {/* Radar pulse leaving the core */}
+        {!reduceMotion && (
+          <motion.circle
+            cx="200"
+            cy="200"
+            stroke="var(--accent)"
+            strokeWidth="1"
+            fill="none"
+            initial={{ r: 80, opacity: 0.45 }}
+            animate={{ r: [80, 128], opacity: [0.45, 0] }}
+            transition={{ repeat: Infinity, duration: 3.4, ease: 'easeOut' }}
+          />
+        )}
+
+        {/* Core with the code glyph, breathing gently */}
+        <motion.g
+          style={spinOrigin}
+          animate={reduceMotion ? {} : { scale: [1, 1.035, 1] }}
+          transition={reduceMotion ? {} : { repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+        >
+          <circle cx="200" cy="200" r="80" fill="var(--subtle)" />
+          <circle cx="200" cy="200" r="80" stroke="var(--accent)" strokeWidth="1" opacity="0.5" />
+          <text x="162" y="215" fontSize="42" fontWeight="300" fill="var(--accent)" opacity="0.9" fontFamily="monospace">&lt;/&gt;</text>
+        </motion.g>
+
         {/* Corner accents */}
         <line x1="30" y1="30" x2="60" y2="30" stroke="var(--accent)" strokeWidth="1.5" opacity="0.5" />
         <line x1="30" y1="30" x2="30" y2="60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.5" />
