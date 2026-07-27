@@ -36,20 +36,29 @@ export default function About({ lang }: AboutProps) {
             transition={{ duration: 0.38, ease: 'easeOut' }}
             className="relative mx-auto md:mx-0 w-[230px] md:w-full"
           >
-            {/* Warm disc behind the cut-out — keeps the silhouette readable in both themes */}
+            {/* Ambient light behind the cut-out — a soft falloff, never a visible edge */}
             <motion.div
               aria-hidden="true"
-              className="absolute left-1/2 -translate-x-1/2 top-[16%] w-[96%] aspect-square rounded-full
-                         bg-gradient-to-br from-accent/35 via-accent/15 to-accent/5"
-              animate={reduceMotion ? {} : { scale: [1, 1.04, 1] }}
+              className="pointer-events-none absolute -inset-x-10 -top-8 -bottom-4"
+              style={{
+                background:
+                  'radial-gradient(60% 52% at 50% 40%, var(--accent) 0%, transparent 72%)',
+                opacity: 0.22,
+                filter: 'blur(28px)',
+              }}
+              animate={reduceMotion ? {} : { opacity: [0.18, 0.28, 0.18], scale: [1, 1.03, 1] }}
               transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
             />
-            {/* Soft halo breathing behind the disc */}
-            <motion.div
+            {/* A tighter, warmer pool of light right behind her */}
+            <div
               aria-hidden="true"
-              className="absolute left-1/2 -translate-x-1/2 top-[12%] w-full aspect-square rounded-full bg-accent/12 blur-2xl"
-              animate={reduceMotion ? {} : { opacity: [0.6, 1, 0.6] }}
-              transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
+              className="pointer-events-none absolute inset-x-0 top-[8%] bottom-[18%]"
+              style={{
+                background:
+                  'radial-gradient(45% 42% at 50% 42%, var(--accent) 0%, transparent 75%)',
+                opacity: 0.18,
+                filter: 'blur(20px)',
+              }}
             />
 
             {/* The portrait itself floats very gently */}
