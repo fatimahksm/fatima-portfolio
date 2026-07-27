@@ -67,11 +67,11 @@ export const aboutContent = {
     fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
   },
   stats: [
-    { value: '5+', label: { en: 'Projects', fr: 'Projets' } },
-    { value: '2', label: { en: 'Internships', fr: 'Stages' } },
-    { value: '1', label: { en: 'Client Project', fr: 'Projet Client' } },
-    { value: '⚡', label: { en: 'Web & Mobile Focus', fr: 'Focus Web & Mobile' } },
-  ],
+    { value: '6+', label: { en: 'Projects', fr: 'Projets' } },
+    { value: '3', label: { en: 'Internships', fr: 'Stages' } },
+    { value: '2', label: { en: 'Client Projects', fr: 'Projets Clients' } },
+    { icon: 'devices', label: { en: 'Web & Mobile Focus', fr: 'Focus Web & Mobile' } },
+  ] as { value?: string; icon?: string; label: { en: string; fr: string } }[],
 }
 
 // ─── Experience ──────────────────────────────────────────────────────────────

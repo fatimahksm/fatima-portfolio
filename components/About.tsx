@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
+import { MonitorSmartphone } from 'lucide-react'
 import type { Lang } from '@/types'
 import { aboutContent, personalInfo, sectionLabels } from '@/data/siteData'
 import SectionHeader from './SectionHeader'
@@ -99,12 +100,18 @@ export default function About({ lang }: AboutProps) {
             >
               {aboutContent.stats.map((stat) => (
                 <motion.div
-                  key={stat.value}
+                  key={stat.label.en}
                   variants={itemVariants}
                   className="bg-card rounded-xl border border-divider p-5 text-center"
                   style={{ boxShadow: 'var(--shadow)' }}
                 >
-                  <div className="text-3xl font-bold text-accent mb-1">{stat.value}</div>
+                  {stat.icon ? (
+                    <div className="h-9 flex items-center justify-center mb-1">
+                      <MonitorSmartphone size={28} strokeWidth={1.6} className="text-accent" />
+                    </div>
+                  ) : (
+                    <div className="h-9 text-3xl font-bold text-accent mb-1">{stat.value}</div>
+                  )}
                   <div className="text-xs font-medium text-ink-2 leading-snug">{stat.label[lang]}</div>
                 </motion.div>
               ))}
