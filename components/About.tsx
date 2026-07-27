@@ -36,33 +36,37 @@ export default function About({ lang }: AboutProps) {
             transition={{ duration: 0.38, ease: 'easeOut' }}
             className="relative mx-auto md:mx-0 w-[230px] md:w-full"
           >
-            {/* Warm glow behind the frame, breathing slowly */}
+            {/* Warm disc behind the cut-out — keeps the silhouette readable in both themes */}
             <motion.div
               aria-hidden="true"
-              className="absolute -inset-3 rounded-[28px] bg-accent/15 blur-xl"
-              animate={reduceMotion ? {} : { opacity: [0.6, 1, 0.6], scale: [1, 1.03, 1] }}
-              transition={reduceMotion ? {} : { repeat: Infinity, duration: 6.5, ease: 'easeInOut' }}
+              className="absolute left-1/2 -translate-x-1/2 top-[16%] w-[96%] aspect-square rounded-full
+                         bg-gradient-to-br from-accent/35 via-accent/15 to-accent/5"
+              animate={reduceMotion ? {} : { scale: [1, 1.04, 1] }}
+              transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
+            />
+            {/* Soft halo breathing behind the disc */}
+            <motion.div
+              aria-hidden="true"
+              className="absolute left-1/2 -translate-x-1/2 top-[12%] w-full aspect-square rounded-full bg-accent/12 blur-2xl"
+              animate={reduceMotion ? {} : { opacity: [0.6, 1, 0.6] }}
+              transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
             />
 
-            <div
-              className="relative rounded-2xl overflow-hidden border border-divider"
-              style={{ boxShadow: 'var(--shadow)' }}
+            {/* The portrait itself floats very gently */}
+            <motion.div
+              className="relative"
+              animate={reduceMotion ? {} : { y: [0, -8, 0] }}
+              transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
             >
-              {/* Very slow drift so the photo feels alive without distracting */}
-              <motion.div
-                animate={reduceMotion ? {} : { scale: [1, 1.06, 1] }}
-                transition={reduceMotion ? {} : { repeat: Infinity, duration: 18, ease: 'easeInOut' }}
-              >
-                <Image
-                  src="/fatima-portrait.jpg"
-                  alt={personalInfo.name}
-                  width={720}
-                  height={900}
-                  sizes="(max-width: 768px) 230px, 280px"
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            </div>
+              <Image
+                src="/fatima-portrait-cutout.png"
+                alt={personalInfo.name}
+                width={720}
+                height={900}
+                sizes="(max-width: 768px) 230px, 280px"
+                className="w-full h-auto"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Text + stats */}
