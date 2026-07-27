@@ -35,14 +35,14 @@ export default function Skills({ lang }: SkillsProps) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
+          viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.04 } } }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {skillCategories.map((cat, idx) => (
             <motion.div
               key={cat.id}
-              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+              variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
               className={`rounded-xl border p-5 ${categoryColors[idx % categoryColors.length]}`}
             >
               <h3 className={`text-sm font-bold mb-4 tracking-wide ${headerColors[idx % headerColors.length]}`}>
@@ -52,10 +52,10 @@ export default function Skills({ lang }: SkillsProps) {
                 {cat.skills.map((skill, si) => (
                   <motion.span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.85 }}
+                    initial={{ opacity: 0, scale: 0.92 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: si * 0.04, duration: 0.3 }}
+                    transition={{ delay: si * 0.02, duration: 0.22 }}
                     className="text-xs font-medium px-2.5 py-1 rounded-md bg-card border border-divider text-ink-2"
                   >
                     {skill}

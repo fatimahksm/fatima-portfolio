@@ -38,10 +38,10 @@ export default function Experience({ lang }: ExperienceProps) {
               return (
                 <motion.div
                   key={exp.id}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.5, delay: i * 0.08, ease: 'easeOut' }}
+                  viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+                  transition={{ duration: 0.35, delay: i * 0.05, ease: 'easeOut' }}
                   className="sm:pl-16 relative"
                 >
                   {/* Timeline dot */}

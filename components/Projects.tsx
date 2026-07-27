@@ -98,8 +98,8 @@ export default function Projects({ lang }: ProjectsProps) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.05 } } }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {projects.map((project) => {
@@ -107,7 +107,7 @@ export default function Projects({ lang }: ProjectsProps) {
             return (
               <motion.div
                 key={project.id}
-                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+                variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
                 className="bg-card rounded-xl border border-divider overflow-hidden flex flex-col group hover:border-accent/40 transition-colors duration-300"
                 style={{ boxShadow: 'var(--shadow)' }}
               >

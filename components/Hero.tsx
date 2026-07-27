@@ -80,9 +80,9 @@ export default function Hero({ lang }: HeroProps) {
           <div>
             {/* Location pill */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.35, delay: 0.05 }}
               className="inline-flex items-center gap-1.5 text-xs font-medium text-ink-2 bg-subtle border border-divider rounded-full px-3 py-1.5 mb-6"
             >
               <MapPin size={12} className="text-accent" />
@@ -91,9 +91,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink leading-[1.18] tracking-tight mb-6"
             >
               {heading[lang]}
@@ -101,9 +101,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Typing text */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.35, delay: 0.18 }}
               className="text-base sm:text-lg font-medium text-accent mb-8 h-7"
             >
               <TypingText texts={typingTexts[lang]} />
@@ -111,9 +111,9 @@ export default function Hero({ lang }: HeroProps) {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.55 }}
+              transition={{ duration: 0.35, delay: 0.26 }}
               className="flex flex-wrap gap-3"
             >
               <button
@@ -145,9 +145,9 @@ export default function Hero({ lang }: HeroProps) {
 
           {/* Right: Abstract visual */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
             className="hidden lg:flex justify-center items-center"
           >
             <AbstractVisual />
@@ -159,7 +159,7 @@ export default function Hero({ lang }: HeroProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+        transition={{ delay: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
       >
         <span className="text-xs text-ink-3 tracking-widest uppercase">scroll</span>

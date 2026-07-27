@@ -30,10 +30,10 @@ export default function Contact({ lang }: ContactProps) {
         <SectionHeader title={sectionLabels.contact[lang]} />
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+          transition={{ duration: 0.35 }}
           className="text-ink-2 text-base leading-relaxed mb-10"
         >
           {contactContent.text[lang]}
@@ -42,8 +42,8 @@ export default function Contact({ lang }: ContactProps) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
+          viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.04 } } }}
           className="flex flex-wrap justify-center gap-3"
         >
           {contactContent.buttons.map((btn) => {
@@ -53,7 +53,7 @@ export default function Contact({ lang }: ContactProps) {
             return (
               <motion.a
                 key={btn.key}
-                variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
+                variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0, transition: { duration: 0.3 } } }}
                 href={btn.href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}

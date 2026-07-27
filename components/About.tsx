@@ -10,12 +10,12 @@ interface AboutProps {
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
+  visible: { transition: { staggerChildren: 0.05 } },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
 }
 
 export default function About({ lang }: AboutProps) {
@@ -27,10 +27,10 @@ export default function About({ lang }: AboutProps) {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Text column */}
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
+            initial={{ opacity: 0, x: -12 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+            transition={{ duration: 0.38, ease: 'easeOut' }}
           >
             <p className="text-ink-2 text-base leading-relaxed">
               {aboutContent.text[lang]}
@@ -42,7 +42,7 @@ export default function About({ lang }: AboutProps) {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, margin: '0px 0px 120px 0px' }}
             className="grid grid-cols-2 gap-4"
           >
             {aboutContent.stats.map((stat) => (
