@@ -94,17 +94,17 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 'ai-research-internship',
-    title: { en: 'AI Research Internship — Master 1', fr: 'Stage de Recherche en IA — Master 1' },
+    title: { en: 'AI Research Internship — Build4All', fr: 'Stage de Recherche en IA — Build4All' },
     role: { en: 'AI Research & Full Stack Intern', fr: 'Stagiaire Recherche IA & Full Stack' },
-    organization: 'Supervised by Dr. Georges Lebbos',
+    organization: 'Master 1 · supervised by Dr. Georges Lebbos',
     year: '2026',
     project: 'Multilingual AI Layer for a Social Agent Platform',
     status: { en: 'Completed', fr: 'Terminé' },
     workType: { en: 'Research & Engineering', fr: 'Recherche & Ingénierie' },
     technologies: ['Python', 'PyTorch', 'Hugging Face', 'QLoRA', 'mBERT', 'RAG / FAISS', 'Java Spring Boot', 'React'],
     description: {
-      en: 'Master 1 research internship on a social-media AI agent platform. Benchmarked and fine-tuned an open 4B language model with QLoRA on multilingual data (English, French, Arabic and Lebanese Arabizi), and proposed Adaptive Guarded QLoRA — a training method adding grounding, drift and repetition objectives under a controller. Built the surrounding layer: an mBERT intent classifier, a router, retrieval over a controlled knowledge base, and fact-grounded generation, evaluated with blinded scoring and bootstrap confidence intervals. In parallel, worked as a full-stack developer on the platform itself (Java Spring Boot and React): AI providers, image generation, Instagram and Facebook publishing, analytics, billing and trilingual RTL localisation.',
-      fr: "Stage de recherche de Master 1 sur une plateforme d'agents IA pour les réseaux sociaux. Évaluation comparative puis fine-tuning d'un modèle de langage ouvert de 4 milliards de paramètres avec QLoRA sur des données multilingues (anglais, français, arabe et arabizi libanais), et proposition d'Adaptive Guarded QLoRA — une méthode d'entraînement ajoutant des objectifs d'ancrage, de dérive et de répétition pilotés par un contrôleur. Construction de la couche autour du modèle : classifieur d'intention mBERT, routeur, recherche sur une base de connaissances contrôlée et génération ancrée dans les faits, évalués en aveugle avec intervalles de confiance bootstrap. En parallèle, développement full stack sur la plateforme (Java Spring Boot et React) : fournisseurs IA, génération d'images, publication Instagram et Facebook, analytics, facturation et localisation trilingue avec mise en page RTL.",
+      en: "Master 1 research internship at Build4All, on the company's Social Agent platform. Benchmarked and fine-tuned an open 4B language model with QLoRA on multilingual data (English, French, Arabic and Lebanese Arabizi), and proposed Adaptive Guarded QLoRA — a training method adding grounding, drift and repetition objectives under a controller. Built the surrounding layer: an mBERT intent classifier, a router, retrieval over a controlled knowledge base, and fact-grounded generation, evaluated with blinded scoring and bootstrap confidence intervals. In parallel, worked as a full-stack developer on the platform itself (Java Spring Boot and React): AI providers, image generation, Instagram and Facebook publishing, analytics, billing and trilingual RTL localisation.",
+      fr: "Stage de recherche de Master 1 chez Build4All, sur la plateforme Social Agent de l'entreprise. Évaluation comparative puis fine-tuning d'un modèle de langage ouvert de 4 milliards de paramètres avec QLoRA sur des données multilingues (anglais, français, arabe et arabizi libanais), et proposition d'Adaptive Guarded QLoRA — une méthode d'entraînement ajoutant des objectifs d'ancrage, de dérive et de répétition pilotés par un contrôleur. Construction de la couche autour du modèle : classifieur d'intention mBERT, routeur, recherche sur une base de connaissances contrôlée et génération ancrée dans les faits, évalués en aveugle avec intervalles de confiance bootstrap. En parallèle, développement full stack sur la plateforme (Java Spring Boot et React) : fournisseurs IA, génération d'images, publication Instagram et Facebook, analytics, facturation et localisation trilingue avec mise en page RTL.",
     },
     badge: 'internship',
   },
@@ -161,15 +161,15 @@ export const experiences: ExperienceItem[] = [
 export const projects: Project[] = [
   {
     id: 'ai-social-agent',
-    name: { en: 'Multilingual AI Layer — Social Agent Platform', fr: "Couche IA Multilingue — Plateforme d'Agents Sociaux" },
+    name: { en: 'Multilingual AI Layer — Build4All Social Agent', fr: "Couche IA Multilingue — Social Agent de Build4All" },
     type: { en: 'AI Research Project', fr: 'Projet de Recherche IA' },
     year: '2026',
     status: { en: 'Completed', fr: 'Terminé' },
     workType: { en: 'Master 1 Research Internship', fr: 'Stage de recherche Master 1' },
     technologies: ['Python', 'PyTorch', 'Hugging Face', 'QLoRA', 'mBERT', 'RAG / FAISS'],
     description: {
-      en: 'A self-hosted multilingual AI layer for a social-media agent platform: an open 4B language model fine-tuned with QLoRA so the product no longer depends only on externally hosted commercial models, with intent routing and retrieval around it.',
-      fr: "Une couche IA multilingue auto-hébergée pour une plateforme d'agents de réseaux sociaux : un modèle de langage ouvert de 4 milliards de paramètres affiné avec QLoRA afin que le produit ne dépende plus uniquement de modèles commerciaux externes, avec routage d'intention et recherche documentaire autour.",
+      en: "A self-hosted multilingual AI layer for Build4All's Social Agent platform: an open 4B language model fine-tuned with QLoRA so the product no longer depends only on externally hosted commercial models, with intent routing and retrieval around it.",
+      fr: "Une couche IA multilingue auto-hébergée pour la plateforme Social Agent de Build4All : un modèle de langage ouvert de 4 milliards de paramètres affiné avec QLoRA afin que le produit ne dépende plus uniquement de modèles commerciaux externes, avec routage d'intention et recherche documentaire autour.",
     },
     features: {
       en: ['Model benchmarking and selection', 'Multilingual dataset engineering (EN / FR / AR / Arabizi)', 'QLoRA fine-tuning', 'Adaptive Guarded QLoRA training method', 'mBERT intent classification and routing', 'Retrieval over a controlled knowledge base', 'Fact-grounded generation', 'Blinded evaluation with bootstrap confidence intervals'],
