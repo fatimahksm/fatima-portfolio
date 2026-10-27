@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fatima-portfolio-rose.vercel.app'),
   title: 'Fatima Kassem — Full Stack Web & Mobile Developer | Applied AI',
   description:
     'Portfolio of Fatima Kassem, Full Stack Web & Mobile Developer based in Lebanon. Flutter, Next.js, React, Java Spring Boot, and applied AI — LLM fine-tuning with QLoRA, mBERT routing and retrieval.',
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     description:
       'Full Stack Web & Mobile Developer based in Lebanon. Flutter, Next.js, React, Java Spring Boot, and applied AI.',
     siteName: 'Fatima Kassem',
+    url: 'https://fatima-portfolio-rose.vercel.app',
     locale: 'en_US',
   },
   twitter: {
