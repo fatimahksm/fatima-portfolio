@@ -69,10 +69,10 @@ export default function About({ lang }: AboutProps) {
               transition={reduceMotion ? {} : { repeat: Infinity, duration: 7, ease: 'easeInOut' }}
             >
               <Image
-                src="/fatima-portrait-cutout.png"
+                src="/fatima-portrait.png"
                 alt={personalInfo.name}
-                width={668}
-                height={814}
+                width={720}
+                height={858}
                 sizes="(max-width: 768px) 230px, 280px"
                 className="w-full h-auto"
               />
