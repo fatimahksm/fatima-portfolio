@@ -142,7 +142,6 @@ export const experiences: ExperienceItem[] = [
     id: 'hobbysphere-internship',
     title: { en: 'Full Stack Software Development Internship — Hobby Sphere', fr: 'Stage Développement Logiciel Full Stack — Hobby Sphere' },
     role: { en: 'Full Stack Software Development Intern', fr: 'Stagiaire en Développement Logiciel Full Stack' },
-    organization: 'Dr. George Lebbos',
     date: 'April 1, 2025 – June 30, 2025',
     project: 'Hobby Sphere',
     status: { en: 'Completed', fr: 'Terminé' },
