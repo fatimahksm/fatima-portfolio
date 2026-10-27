@@ -43,12 +43,14 @@ export const heroContent = {
       'Full Stack Web & Mobile Developer',
       'Flutter Developer',
       'Spring Boot Developer',
+      'AI & LLM Fine-Tuning',
       'Frontend & Backend Developer',
     ],
     fr: [
       'Développeuse Full Stack Web & Mobile',
       'Développeuse Flutter',
       'Développeuse Spring Boot',
+      'IA & Fine-Tuning de LLM',
       'Développeuse Frontend & Backend',
     ],
   },
@@ -63,11 +65,11 @@ export const heroContent = {
 
 export const aboutContent = {
   text: {
-    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently working at a software company on a Flutter mobile product while pursuing Master 1 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. I focus on building practical, elegant, and scalable digital solutions across web and mobile platforms, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
-    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 1 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web et le mobile, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
+    en: 'I am a Full Stack Web & Mobile Developer based in Lebanon, currently working at a software company on a Flutter mobile product while pursuing Master 2 in Technology and Science of Information Systems at the Lebanese University - Faculty of Technology. My Master 1 research internship took me into applied AI — fine-tuning a multilingual language model and building the retrieval and routing layer around it — and I now work across both worlds. I focus on building practical, elegant, and scalable digital solutions across web, mobile, and AI, with experience in frontend development, backend APIs, database integration, and real-world client and internship projects.',
+    fr: "Je suis une développeuse Full Stack Web & Mobile basée au Liban, travaillant actuellement dans une société de logiciels sur un produit mobile Flutter, tout en poursuivant un Master 2 en Technologie et Sciences des Systèmes d'Information à l'Université Libanaise - Faculté de Technologie. Mon stage de recherche de Master 1 m'a menée vers l'IA appliquée — fine-tuning d'un modèle de langage multilingue et construction de la couche de recherche et de routage autour — et je travaille aujourd'hui dans les deux domaines. Je me concentre sur la création de solutions digitales pratiques, élégantes et évolutives pour le web, le mobile et l'IA, avec une expérience en développement frontend, APIs backend, intégration de bases de données, projets clients et stages réels.",
   },
   stats: [
-    { value: '6+', label: { en: 'Projects', fr: 'Projets' } },
+    { value: '8+', label: { en: 'Projects', fr: 'Projets' } },
     { value: '3', label: { en: 'Internships', fr: 'Stages' } },
     { value: '2', label: { en: 'Client Projects', fr: 'Projets Clients' } },
     { icon: 'devices', label: { en: 'Web & Mobile Focus', fr: 'Focus Web & Mobile' } },
@@ -89,6 +91,22 @@ export const experiences: ExperienceItem[] = [
       fr: "Actuellement employée dans une société de logiciels, où je travaille avec l'équipe sur le produit mobile de l'entreprise — une application Flutter avec un backend Java Spring Boot et PostgreSQL. J'ai également encadré une dizaine de stagiaires sur trois projets internes (février – mai 2026) : revue de code, accompagnement du processus de développement et aide à la résolution de problèmes techniques. Les noms de la société et des projets restent confidentiels.",
     },
     badge: 'confidential',
+  },
+  {
+    id: 'ai-research-internship',
+    title: { en: 'AI Research Internship — Master 1', fr: 'Stage de Recherche en IA — Master 1' },
+    role: { en: 'AI Research & Full Stack Intern', fr: 'Stagiaire Recherche IA & Full Stack' },
+    organization: 'Supervised by Dr. Georges Lebbos',
+    year: '2026',
+    project: 'Multilingual AI Layer for a Social Agent Platform',
+    status: { en: 'Completed', fr: 'Terminé' },
+    workType: { en: 'Research & Engineering', fr: 'Recherche & Ingénierie' },
+    technologies: ['Python', 'PyTorch', 'Hugging Face', 'QLoRA', 'mBERT', 'RAG / FAISS', 'Java Spring Boot', 'React'],
+    description: {
+      en: 'Master 1 research internship on a social-media AI agent platform. Benchmarked and fine-tuned an open 4B language model with QLoRA on multilingual data (English, French, Arabic and Lebanese Arabizi), and proposed Adaptive Guarded QLoRA — a training method adding grounding, drift and repetition objectives under a controller. Built the surrounding layer: an mBERT intent classifier, a router, retrieval over a controlled knowledge base, and fact-grounded generation, evaluated with blinded scoring and bootstrap confidence intervals. In parallel, worked as a full-stack developer on the platform itself (Java Spring Boot and React): AI providers, image generation, Instagram and Facebook publishing, analytics, billing and trilingual RTL localisation.',
+      fr: "Stage de recherche de Master 1 sur une plateforme d'agents IA pour les réseaux sociaux. Évaluation comparative puis fine-tuning d'un modèle de langage ouvert de 4 milliards de paramètres avec QLoRA sur des données multilingues (anglais, français, arabe et arabizi libanais), et proposition d'Adaptive Guarded QLoRA — une méthode d'entraînement ajoutant des objectifs d'ancrage, de dérive et de répétition pilotés par un contrôleur. Construction de la couche autour du modèle : classifieur d'intention mBERT, routeur, recherche sur une base de connaissances contrôlée et génération ancrée dans les faits, évalués en aveugle avec intervalles de confiance bootstrap. En parallèle, développement full stack sur la plateforme (Java Spring Boot et React) : fournisseurs IA, génération d'images, publication Instagram et Facebook, analytics, facturation et localisation trilingue avec mise en page RTL.",
+    },
+    badge: 'internship',
   },
   {
     id: 'ecommerce-client',
@@ -141,6 +159,49 @@ export const experiences: ExperienceItem[] = [
 // ─── Projects ─────────────────────────────────────────────────────────────────
 
 export const projects: Project[] = [
+  {
+    id: 'ai-social-agent',
+    name: { en: 'Multilingual AI Layer — Social Agent Platform', fr: "Couche IA Multilingue — Plateforme d'Agents Sociaux" },
+    type: { en: 'AI Research Project', fr: 'Projet de Recherche IA' },
+    year: '2026',
+    status: { en: 'Completed', fr: 'Terminé' },
+    workType: { en: 'Master 1 Research Internship', fr: 'Stage de recherche Master 1' },
+    technologies: ['Python', 'PyTorch', 'Hugging Face', 'QLoRA', 'mBERT', 'RAG / FAISS'],
+    description: {
+      en: 'A self-hosted multilingual AI layer for a social-media agent platform: an open 4B language model fine-tuned with QLoRA so the product no longer depends only on externally hosted commercial models, with intent routing and retrieval around it.',
+      fr: "Une couche IA multilingue auto-hébergée pour une plateforme d'agents de réseaux sociaux : un modèle de langage ouvert de 4 milliards de paramètres affiné avec QLoRA afin que le produit ne dépende plus uniquement de modèles commerciaux externes, avec routage d'intention et recherche documentaire autour.",
+    },
+    features: {
+      en: ['Model benchmarking and selection', 'Multilingual dataset engineering (EN / FR / AR / Arabizi)', 'QLoRA fine-tuning', 'Adaptive Guarded QLoRA training method', 'mBERT intent classification and routing', 'Retrieval over a controlled knowledge base', 'Fact-grounded generation', 'Blinded evaluation with bootstrap confidence intervals'],
+      fr: ['Évaluation et sélection de modèles', 'Ingénierie de données multilingues (EN / FR / AR / Arabizi)', 'Fine-tuning QLoRA', "Méthode d'entraînement Adaptive Guarded QLoRA", "Classification d'intention mBERT et routage", 'Recherche sur une base de connaissances contrôlée', 'Génération ancrée dans les faits', 'Évaluation en aveugle avec intervalles bootstrap'],
+    },
+    role: { en: 'AI Research & Full Stack Developer', fr: 'Chercheuse IA & Développeuse Full Stack' },
+    teamInfo: { en: 'Individual research, supervised', fr: 'Recherche individuelle, encadrée' },
+    badge: 'solo',
+    gradient: 'from-violet-300/45 via-fuchsia-200/25 to-violet-200/35',
+    privateCode: true,
+  },
+  {
+    id: 'wedding-qr',
+    name: { en: 'Wedding QR — Multi-Tenant SaaS', fr: 'Wedding QR — SaaS Multi-Tenant' },
+    type: { en: 'SaaS Product', fr: 'Produit SaaS' },
+    year: '2026',
+    status: { en: 'Completed', fr: 'Terminé' },
+    workType: { en: 'Solo', fr: 'Individuel' },
+    technologies: ['Next.js', 'Java Spring Boot', 'PostgreSQL', 'Cloud Storage'],
+    description: {
+      en: 'A multi-tenant SaaS platform where each wedding gets its own QR code: guests scan it to open the event space and upload their photos, which are stored in cloud storage rather than on the server.',
+      fr: "Une plateforme SaaS multi-tenant où chaque mariage reçoit son propre QR code : les invités le scannent pour ouvrir l'espace de l'événement et téléverser leurs photos, stockées dans le cloud plutôt que sur le serveur.",
+    },
+    features: {
+      en: ['Multi-tenant architecture', 'Per-event QR code generation', 'Guest photo upload', 'Cloud media storage', 'Event dashboard', 'Responsive design'],
+      fr: ['Architecture multi-tenant', 'Génération de QR code par événement', 'Téléversement de photos par les invités', 'Stockage des médias dans le cloud', "Tableau de bord de l'événement", 'Design responsive'],
+    },
+    role: { en: 'Full Stack Developer', fr: 'Développeuse Full Stack' },
+    teamInfo: { en: 'Solo Project', fr: 'Projet individuel' },
+    badge: 'solo',
+    gradient: 'from-sky-300/45 via-cyan-200/25 to-sky-200/35',
+  },
   {
     id: 'confidential',
     name: { en: 'Company Mobile App — Confidential', fr: "Application Mobile d'Entreprise — Confidentielle" },
@@ -298,6 +359,11 @@ export const skillCategories: SkillCategory[] = [
     skills: ['Java Spring Boot', 'Node.js', 'REST APIs'],
   },
   {
+    id: 'ai',
+    label: { en: 'AI / Machine Learning', fr: 'IA / Machine Learning' },
+    skills: ['Python', 'PyTorch', 'Hugging Face', 'LLM Fine-Tuning (QLoRA)', 'mBERT', 'RAG / FAISS', 'TensorFlow', 'Keras', 'CNN'],
+  },
+  {
     id: 'databases',
     label: { en: 'Databases', fr: 'Bases de Données' },
     skills: ['PostgreSQL', 'SQLite', 'Firebase', 'MySQL'],
@@ -326,8 +392,16 @@ export const education: EducationItem[] = [
     current: false,
   },
   {
-    id: 'master',
+    id: 'master1',
     degree: { en: 'Master 1', fr: 'Master 1' },
+    institution: { en: 'Lebanese University - Faculty of Technology', fr: 'Université Libanaise - Faculté de Technologie' },
+    field: { en: 'Technology and Science of Information Systems', fr: "Technologie et Sciences des Systèmes d'Information" },
+    year: { en: 'Completed 2026', fr: 'Terminé en 2026' },
+    current: false,
+  },
+  {
+    id: 'master2',
+    degree: { en: 'Master 2', fr: 'Master 2' },
     institution: { en: 'Lebanese University - Faculty of Technology', fr: 'Université Libanaise - Faculté de Technologie' },
     field: { en: 'Technology and Science of Information Systems', fr: "Technologie et Sciences des Systèmes d'Information" },
     year: { en: 'Current', fr: 'Actuellement' },
