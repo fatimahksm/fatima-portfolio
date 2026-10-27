@@ -12,6 +12,11 @@ export function useLanguage() {
     }
   }, [])
 
+  // Keep <html lang> in step so screen readers and crawlers read the right language
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   function toggleLang() {
     const next: Lang = lang === 'en' ? 'fr' : 'en'
     setLang(next)

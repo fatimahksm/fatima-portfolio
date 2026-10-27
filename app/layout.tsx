@@ -13,9 +13,23 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Fatima Kassem — Full Stack Web & Mobile Developer',
+  title: 'Fatima Kassem — Full Stack Web & Mobile Developer | Applied AI',
   description:
-    'Portfolio of Fatima Kassem, Full Stack Web & Mobile Developer based in Lebanon. React, Next.js, React Native, Spring Boot.',
+    'Portfolio of Fatima Kassem, Full Stack Web & Mobile Developer based in Lebanon. Flutter, Next.js, React, Java Spring Boot, and applied AI — LLM fine-tuning with QLoRA, mBERT routing and retrieval.',
+  openGraph: {
+    type: 'website',
+    title: 'Fatima Kassem — Full Stack Web & Mobile Developer | Applied AI',
+    description:
+      'Full Stack Web & Mobile Developer based in Lebanon. Flutter, Next.js, React, Java Spring Boot, and applied AI.',
+    siteName: 'Fatima Kassem',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fatima Kassem — Full Stack Web & Mobile Developer | Applied AI',
+    description:
+      'Full Stack Web & Mobile Developer based in Lebanon. Flutter, Next.js, React, Java Spring Boot, and applied AI.',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
